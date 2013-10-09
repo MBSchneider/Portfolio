@@ -8,7 +8,7 @@ By [Matt Schneider](github.com/MBSchneider)
 
 Screenshots of rake test below:
 
-![Screenshot 1](placekitten.com/400/300)
+![Screenshot 1](https://github.com/MBSchneider/Portfolio/blob/master/test/Rake%20minitest%20-%20Portfolio.png)
 
 ## Authors
 
