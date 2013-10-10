@@ -14,6 +14,7 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rake routes
   - bundle exec rake
+  - rails -v
 
 
 bundler_args: --binstubs=./bundler_stubs
