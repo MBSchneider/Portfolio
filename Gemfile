@@ -5,7 +5,11 @@ group :development, :test do
 end
 
 group :test do
-  gem "minitest-rails-capybara"
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-colorize'
+  gem 'minitest-focus'
+  gem 'turn'
 end
 
 
