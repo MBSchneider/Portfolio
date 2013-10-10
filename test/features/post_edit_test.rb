@@ -5,11 +5,10 @@ feature "Editing a post" do
   scenario "select edit on a valid post" do
 
   #create post to test
-  test_post = Post.create(title: "Here's my number", body: "Call me maybe?
-    ")
+  post = Post.create(title: "Here's my number", content: "Call me maybe?")
 
   # Given a completed post form
-  visit post_path(test_post)
+  visit post_path(post)
   click_on "Edit"
   fill_in 'Title', with: 'there is no hope'
   fill_in 'Content', with: 'the dark side is too strong'
