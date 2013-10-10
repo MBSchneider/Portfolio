@@ -1,6 +1,6 @@
 language: ruby
-rbenv:
-  - "2.0.0-p247"
+#rbenv:
+#  - "2.0.0-p247"
 #  - "1.9.2"
 #  - "1.9.3"
 #  - jruby-18mode # JRuby in 1.8 mode
