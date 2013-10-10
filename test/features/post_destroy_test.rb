@@ -15,3 +15,18 @@ feature "Delete a post" do
   page.wont_have_content "Big gulps, huh?"
   end
 end
+
+feature "Delete a post w fixtures" do
+  #focus
+  scenario "select delete on a valid post" do
+
+  #Navigate to index
+  visit posts_path
+
+  # When destroy is clicked
+  page.find("tr:last").click_on "Destroy"
+
+  # Message should no longer show
+  page.wont_have_content "We are young."
+  end
+end
