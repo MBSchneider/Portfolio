@@ -7,6 +7,7 @@ feature "creating a portfolio project" do
   visit projects_path
   click_on "New Project"
   fill_in "Title", with: projects(:mdp).title
+  fill_in "Technologies used", with: projects(:mdp).technologies_used
 
   # When I submit the form
   click_on 'Create Project'
