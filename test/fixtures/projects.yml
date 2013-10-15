@@ -1,3 +1,11 @@
 mdp:
   title: Million Dollar Project
   technologies_used: rails
+
+bp:
+  title: bad
+  technologies_used: magic
+
+cfb:
+  title: College football
+  technologies_used: js, HTML, ruby, rails

@@ -3,9 +3,11 @@
 <p>
   <b>Title:</b>
   <%= @project.title %>
-  <%= @project.technologies_used %>
+</br>
+<b>Technologies used:</b>
+<%= @project.technologies_used %>
 </p>
 
 
-<% #link_to 'Edit', edit_post_path(@post) %>
+<%= link_to 'Edit', edit_project_path(@project) %>
 <%= link_to 'Back', projects_path %>
