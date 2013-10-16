@@ -5,6 +5,8 @@ feature "viewing a portfolio project" do
 
   # Given a project
   visit projects_path
+  save_and_open_page
+
 
   within("#786063105") do
     click_on "Show"
