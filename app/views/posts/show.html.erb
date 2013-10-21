@@ -1,19 +1,15 @@
-<p id="notice"><%= notice %></p>
+<h3><%= @post.title %></h3>
 
 <p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Content:</b>
   <%= @post.content %>
 </p>
 
 <p id="author">
-  <b>Submitted by:</b>
-  <%= @post.author.email %>
+  <em>Submitted by:
+  <%= @post.author.email %></em>
 </p>
 
+<% if policy(@post).update? %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
 <%= link_to 'Back', posts_path %>

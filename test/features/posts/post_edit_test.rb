@@ -3,13 +3,13 @@ require "test_helper"
 feature "Editing a post" do
   #focus
   scenario "select edit on a valid post" do
-
-  sign_in
+  editor_sign_in
 
   visit post_path(posts(:vi))
 
   # Given a completed post form
-  click_on "Edit"
+  click_link "Edit"
+
   fill_in 'Title', with: posts(:bsh).title
   fill_in 'Content', with: posts(:bsh).content
 

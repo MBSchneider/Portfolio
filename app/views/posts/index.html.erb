@@ -1,4 +1,4 @@
-<h1>Listing posts</h1>
+<h1>Recent Blog Posts</h1>
 
 <table>
   <tr>
@@ -8,18 +8,24 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% @posts.each do |post| %>
+  <tr id="<%= dom_id(post) %>">
+    <% if policy(post).show? %>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <td><button type="button" class="btn"><%= link_to 'Show', post %></button></td>
+    <% end %>
+    <% if policy(post).update? %>
+    <td><button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_post_path(post) %></button></td>
+    <% end %>
+    <% if policy(post).destroy? %>
+    <td><button type="button" class="btn btn-danger"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+    <% end %>
   </tr>
+  <% end %>
+<table>
+
+
+<% if current_user && (current_user.editor? || current_user.author?) %>
+<button type="button" class="btn btn-success"><%= link_to 'New Post', new_post_path %></button>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>

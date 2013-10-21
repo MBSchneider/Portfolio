@@ -3,8 +3,7 @@ require "test_helper"
 feature "creating a post" do
   #focus
   scenario "works with valid data" do
-    sign_in
-
+    editor_sign_in
     # Given a completed new post form
     visit new_post_path
     fill_in "Title", with: posts(:bsh).title

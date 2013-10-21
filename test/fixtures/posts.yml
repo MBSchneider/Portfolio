@@ -2,13 +2,16 @@ bsh:
   title: Ball so hard
   content: MF'ers wanna fine me!
   author: one
+  published: true
 
 vi:
   title: Vanilla
   content: Ice, ice baby!
   author: one
+  published: true
 
 way:
   title: Tonight
   content: We are young.
   author: one
+  published: true

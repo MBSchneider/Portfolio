@@ -12,6 +12,8 @@ group :test do
   gem 'turn'
 end
 
+gem 'pundit'
+gem 'simplecov', :require => false, :group => :test
 
 gem 'rails', '3.2.14'
 
