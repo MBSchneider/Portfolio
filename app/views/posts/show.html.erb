@@ -6,10 +6,57 @@
 
 <p id="author">
   <em>Submitted by:
-  <%= @post.author.email %></em>
+    <%= @post.author.email %>
+  </em>
 </p>
+
+<% unless @post.comments.size == 0 %>
+<br />
+<div class="row">
+    <div class="col-md-4">
+<h4>Comments</h4>
+<% end %>
+<table>
+  <% policy_scope(@post.comments).each do |comment| %>
+  <tr>
+    <td><%= comment.body %></td>
+    <td>
+    <% if policy(comment).approve? %>
+      <% if comment.approved %>
+        <%= button_to 'Remove approval', post_comment_path(@post, comment, comment: { approved: false }), method: :put, class: "btn btn-warning" %>
+      <% else %>
+        <%= button_to 'Approve', post_comment_path(@post, comment, comment: { approved: true }), method: :put, class: "btn btn-success" %>
+      <% end %>
+      <td><%= button_to 'X', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Delete comment?' }, class: "btn btn-danger" %></td>
+    <% elsif !comment.approved %>
+      <span style="color:red">Unapproved</span>
+    <% end %></td>
+  </tr>
+  <tr>
+    <td>
+      <em><%= comment.author_email %></em></td>
+  </tr>
+  <% end %>
+</table>
+<br />
+<%= form_for([@post, @post.comments.build]) do |f| %>
+<p>
+  <%= f.label :add_a_comment %><br />
+  <%= f.text_area :body, class: "form-control", rows: "3" %>
+</p>
+<p>
+  <%= f.label :Email %><br />
+  <%= f.email_field :author_email %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+</div>
+</div>
 
 <% if policy(@post).update? %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>
+
 <%= link_to 'Back', posts_path %>

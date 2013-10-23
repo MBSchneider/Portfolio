@@ -1,0 +1,14 @@
+comment1:
+  body: One comment
+  author: one
+  approved: true
+
+comment2:
+  body: Two comment
+  author: one
+  approved: true
+
+comment3:
+  body: Three comment
+  author: one
+  approved: true

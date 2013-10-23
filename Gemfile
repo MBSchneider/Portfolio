@@ -14,8 +14,12 @@ end
 
 gem 'pundit'
 gem 'simplecov', :require => false, :group => :test
+gem 'pry-rails'
+gem 'omniauth-twitter'
+gem 'figaro'
 
 gem 'rails', '3.2.14'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
