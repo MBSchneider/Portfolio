@@ -5,10 +5,13 @@ feature "signing up" do
   scenario "create User account" do
 
     #Given a completed user registration form
-    visit new_user_registration_path
-    fill_in 'Email', with: 'snoop@lion.com'
-    fill_in 'Password', with: 'snooplion'
-    fill_in 'Password confirmation', with: 'snooplion'
+    visit posts_path
+
+    click_on "Sign Up"
+
+    fill_in 'Email', with: 'dave@lion.com'
+    fill_in 'Password', with: 'davelion'
+    fill_in 'Password confirmation', with: 'davelion'
 
     # When I submit the form
     click_on 'Sign up'

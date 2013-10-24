@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     @comment.approved = false
     @comment.save
     current_user.comments << @comment
-    binding.pry
+    flash[:notice] = "Comment was successfully created"
     redirect_to post_path(@post)
   end
 

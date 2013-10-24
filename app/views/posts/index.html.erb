@@ -34,9 +34,8 @@
         <% end %>
       </table>
 
-
       <% if current_user && (current_user.editor? || current_user.author?) %>
-      <button type="button" class="btn btn-success"><%= link_to 'New Post', new_post_path %></button>
+        <%= button_to 'New Post', new_post_path, :method => "get", class: "btn btn-success" %>
       <% end %>
     </div>
   </div>

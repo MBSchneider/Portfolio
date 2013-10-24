@@ -8,7 +8,7 @@ feature "Delete a post as editor" do
     visit posts_path
 
     # Click destroy link
-    page.find("#post_1002452156").click_link "Destroy"
+    page.find("#post_1002452156").click_button "Destroy"
 
     # Post will be deleted
     page.text.wont_include "We are young."

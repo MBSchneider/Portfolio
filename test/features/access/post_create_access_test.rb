@@ -29,7 +29,7 @@ feature "creating a post as editor" do
 
     # Given a completed new post form
     visit posts_path
-    click_link "New Post"
+    click_button "New Post"
     fill_in "Title", with: posts(:vi).title
     fill_in "Content", with: posts(:vi).content
 
@@ -74,7 +74,7 @@ feature "creating a post as author" do
 
     # Given a completed new post form
     visit posts_path
-    click_link "New Post"
+    click_button "New Post"
     fill_in "Title", with: posts(:vi).title
     fill_in "Content", with: posts(:vi).content
 

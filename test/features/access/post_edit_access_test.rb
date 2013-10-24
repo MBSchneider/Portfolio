@@ -30,7 +30,7 @@ feature "editing a post as editor" do
     visit posts_path
 
     # Click edit link
-    page.find("#post_1002452156").click_link "Edit"
+    page.find("#post_1002452156").click_button "Edit"
 
     fill_in "Title", with: posts(:bsh).title
     fill_in "Content", with: posts(:bsh).content

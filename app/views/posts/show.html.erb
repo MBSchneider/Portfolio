@@ -18,16 +18,16 @@
 <% end %>
 <table>
   <% policy_scope(@post.comments).each do |comment| %>
-  <tr>
+  <tr id="<%= dom_id(comment) %>">
     <td><%= comment.body %></td>
     <td>
     <% if policy(comment).approve? %>
       <% if comment.approved %>
-        <%= button_to 'Remove approval', post_comment_path(@post, comment, comment: { approved: false }), method: :put, class: "btn btn-warning" %>
+        <%= button_to 'Remove approval', post_comment_path(@post, comment, comment: { approved: false }), method: :put, class: "btn btn-warning btn-sm" %>
       <% else %>
-        <%= button_to 'Approve', post_comment_path(@post, comment, comment: { approved: true }), method: :put, class: "btn btn-success" %>
+        <%= button_to 'Approve', post_comment_path(@post, comment, comment: { approved: true }), method: :put, class: "btn btn-success btn-sm" %>
       <% end %>
-      <td><%= button_to 'X', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Delete comment?' }, class: "btn btn-danger" %></td>
+      <td><%= button_to 'X', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Delete comment?' }, class: "btn btn-danger btn-sm" %></td>
     <% elsif !comment.approved %>
       <span style="color:red">Unapproved</span>
     <% end %></td>

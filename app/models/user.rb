@@ -2,11 +2,10 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :omniauthable,
-         :recoverable, :rememberable, :trackable, :validatable
+  :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role, :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :title, :body
 
   has_many :posts, foreign_key: "author_id"
   has_many :comments, foreign_key: "author_id"
@@ -36,11 +35,10 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
 
-    def password_required?
-      super && provider.blank?
-    end
-
+  def password_required?
+    super && provider.blank?
   end
 
   def update_with_password(params, *options)
@@ -50,11 +48,4 @@ class User < ActiveRecord::Base
       super
     end
   end
-
-
-
-
-
-
-
 end

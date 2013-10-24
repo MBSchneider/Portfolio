@@ -1,6 +1,6 @@
 require "test_helper"
 
-feature "****Delete a post w fixtures" do
+feature "Delete a post w fixtures" do
   #focus
   scenario "select delete on a valid post" do
 
@@ -10,7 +10,7 @@ feature "****Delete a post w fixtures" do
   visit posts_path
 
   # When destroy is clicked
-  page.find("#post_1002452156").click_link "Destroy"
+  page.find("#post_1002452156").click_button "Destroy"
 
   # Message should no longer show
   page.wont_have_content "We are young."
