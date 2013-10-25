@@ -17,6 +17,7 @@ gem 'simplecov', :require => false, :group => :test
 gem 'pry-rails'
 gem 'omniauth-twitter'
 gem 'figaro'
+gem 'travis'
 
 gem 'rails', '3.2.14'
 
