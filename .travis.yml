@@ -8,6 +8,10 @@ rvm:
 
 env:
   - DB=sqlite
+  - DEVISE_SECRET_KEY=1111122222333334444455555abcdefgjklopqt
+
+
+
 
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
