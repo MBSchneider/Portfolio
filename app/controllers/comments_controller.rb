@@ -1,15 +1,26 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :load_commentable
+
+  def index
+    @comments = @commentable.comments
+  end
+
+  def new
+    @comment = @commentable.comments.new
+  end
 
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.create(params[:comment])
+    @comment = @commentable.comments.new(params[:comment])
     @comment.author = current_user
     @comment.approved = false
-    @comment.save
-    current_user.comments << @comment
-    flash[:notice] = "Comment was successfully created"
-    redirect_to post_path(@post)
+    if @comment.save
+      current_user.comments << @comment
+      flash[:notice] = "Comment was successfully created"
+      redirect_to [@commentable]
+    else
+      render :new
+    end
   end
 
   def update
@@ -26,14 +37,18 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    @post = @comment.post
     authorize @comment
     @comment.destroy
-
     respond_to do |format|
-      format.html { redirect_to @post }
+      format.html { redirect_to @commentable }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def load_commentable
+    resource, id = request.path.split('/')[1,2]
+    @commentable = resource.singularize.classify.constantize.find(id)
   end
 
 end

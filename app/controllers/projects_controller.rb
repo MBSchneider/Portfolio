@@ -23,6 +23,13 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @commentable = @project
+    @comments = policy_scope(@commentable.comments)
+    @comment = Comment.new
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @post }
+    end
   end
 
   def new

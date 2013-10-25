@@ -31,3 +31,35 @@ feature "standard user - visits post item to see comments" do
 
   end
 end
+
+feature "Editor - visit project as editor to see comments" do
+  scenario "project shows all comments on page" do
+    editor_sign_in
+
+    # Given completed comments on a project form
+    visit projects_path
+
+    page.find("#102197991").click_link "Show"
+
+    # Then post should be shown
+    page.text.must_include comments(:comment4).body
+    page.text.must_include comments(:comment5).body
+
+  end
+end
+
+feature "standard user - visits project item to see comments" do
+  scenario "project shows approved comments only on page" do
+    reg_sign_in
+
+    # Given completed comments on a project form
+    visit projects_path
+
+    page.find("#102197991").click_link "Show"
+
+    # Then post should be shown
+    page.text.must_include comments(:comment4).body
+    page.text.wont_include comments(:comment5).body
+
+  end
+end

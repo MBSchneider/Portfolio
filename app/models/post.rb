@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, as: :commentable
   attr_accessible :content, :title, :published
   validates_presence_of :title, :content
 

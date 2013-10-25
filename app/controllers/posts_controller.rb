@@ -17,6 +17,9 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @commentable = @post
+    @comments = policy_scope(@commentable.comments)
+    @comment = Comment.new
     authorize @post
     respond_to do |format|
       format.html # show.html.erb

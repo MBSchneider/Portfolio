@@ -2,16 +2,33 @@ comment1:
   body: One comment
   author: one
   approved: true
-  post_id: 1002452156
+  commentable_id: 1002452156
+  commentable_type: "Post"
 
 comment2:
   body: Two comment
   author: one
   approved: true
-  post_id: 1002452156
+  commentable_id: 1002452156
+  commentable_type: "Post"
 
 comment3:
   body: Three comment
   author: one
   approved: false
-  post_id: 1002452156
+  commentable_id: 1002452156
+  commentable_type: "Post"
+
+comment4:
+  body: Four comment
+  author: one
+  approved: true
+  commentable_id: 102197991
+  commentable_type: "Project"
+
+comment5:
+  body: Five comment
+  author: one
+  approved: false
+  commentable_id: 102197991
+  commentable_type: "Project"
