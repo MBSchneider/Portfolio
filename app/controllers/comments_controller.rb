@@ -27,11 +27,10 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     if @comment.update_attributes(params[:comment])
       flash[:notice] = "Comment has been approved"
-      redirect_to @comment.post
+      redirect_to @commentable
     else
       flash[:alert] = "Comment was not approved"
-      @post = @comment.post
-      render template: "posts/show"
+      render @commentable
     end
   end
 

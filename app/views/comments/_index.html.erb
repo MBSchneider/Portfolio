@@ -13,11 +13,12 @@
 
             <% if comment.approved %>
               <td>
-                <%= button_to 'Remove approval', [@commentable, comment], comment: { approved: false }, method: :put, class: "btn btn-warning btn-sm" %>
+                <%= button_to 'Remove approval', polymorphic_path([@commentable, comment], comment: { approved: false }), method: :put, class: "btn btn-warning btn-sm" %>
               </td>
             <% else %>
               <td>
-                <%= button_to 'Approve', [@commentable, comment], comment: { approved: true }, method: :put, class: "btn btn-success btn-sm" %>
+                <%= button_to 'Approve', polymorphic_path([@commentable, comment], comment: { approved: true }), method: :put, class: "btn btn-success btn-sm" %>
+
               </td>
             <% end %>
           <td>
