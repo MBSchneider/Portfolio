@@ -18,4 +18,4 @@
 /config/application.yml
 
 # Ignore simplecov
-/coverage
+/coverage/*
