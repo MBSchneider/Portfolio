@@ -25,7 +25,7 @@ body {
     padding: 0 20px;
   }
 }
-.main-row { 
+.main-row {
   margin-bottom:40px;
 }
 .wrapper {
@@ -64,7 +64,7 @@ blockquote {
   color: #888888;
   font-family: 'Tinos',serif;
   font-style: italic;
-  line-height: 1.4em;  
+  line-height: 1.4em;
   font-size:14px;
 }
 blockquote p{
@@ -199,13 +199,13 @@ p {
   width: 45px;
   height: 45px;
   display: inline-block;
-  background: url("../images/logo.png") no-repeat 0 50%;
+  background: url("logo.png") no-repeat 0 50%;
   vertical-align: middle;
 }
 .navbar a.brand small{
   color:#888;
   font-size:12px;
-  vertical-align: bottom;  
+  vertical-align: bottom;
 }
 .navbar a.brand span.logo-text {
   color: #000000;
@@ -216,7 +216,7 @@ p {
   vertical-align: middle;
 }
 .navbar .navi {
-  
+
 background-image: linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,255) 100%);
 background-image: -o-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,255) 100%);
 background-image: -moz-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,255) 100%);
@@ -261,7 +261,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   text-shadow: none;
   box-shadow: none;
   color: #ffffff;
-  border-color:#383838;  
+  border-color:#383838;
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
@@ -300,7 +300,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
  display:none;
 }
 .navbar .nav ul.dropdown-menu li {
- border: 0; 
+ border: 0;
 }
 .navbar .nav ul.dropdown-menu li a {
   background-color: #383838;
@@ -335,10 +335,10 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   }
   .navbar .nav li {
     min-width: 0;
-  }  
+  }
   .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .navbar .nav > .active > a, .navbar .nav > .active > a:hover {
     padding: 1px 5px;
-  }  
+  }
   #search input[type="text"] {
     width: 130px;
   }
@@ -349,7 +349,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   }
   .navbar .nav {
     display: none;
-  }  
+  }
   #search {
     float:right;
 	padding-right:40%;
@@ -462,14 +462,14 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
 }
 .navbar .btn-group {
   margin-top:0px;
-  line-height:45px;  
+  line-height:45px;
 }
 .navbar .btn-group .btn{
   padding:0 12px;
 }
 .navbar .btn-group a.btn{
   padding-left:29px;
-  background:#f7f7f7 url("../images/flags/gb.png") no-repeat 5px center;
+  background:#f7f7f7 url("flags/gb.png") no-repeat 5px center;
   border-color:#d5d5d5;
   font-size:12px;
   color:#333;
@@ -513,17 +513,17 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   margin-bottom:0;
 }
 .navbar ul.dropdown-menu  li.fr a{
- background:#f7f7f7 url("../images/flags/fr.png") no-repeat 5px center;
+ background:#f7f7f7 url("flags/fr.png") no-repeat 5px center;
 }
 .navbar ul.dropdown-menu  li.it a{
- background:#f7f7f7 url("../images/flags/it.png") no-repeat 5px center;
+ background:#f7f7f7 url("flags/it.png") no-repeat 5px center;
  border:none;
 }
 .navbar ul.dropdown-menu  li.es a{
- background:#f7f7f7 url("../images/flags/es.png") no-repeat 5px center;
+ background:#f7f7f7 url("flags/es.png") no-repeat 5px center;
 }
 .navbar ul.dropdown-menu  li.de a{
- background:#f7f7f7 url("../images/flags/de.png") no-repeat 5px center;
+ background:#f7f7f7 url("flags/de.png") no-repeat 5px center;
 }
 @media (min-width:700px) and (max-width:767px) {
   .navbar span.langaddr {
@@ -654,7 +654,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   opacity: 0.5;
 }
 .flex-direction-nav .flex-prev {
-  background: url('../images/arrow-slider-left.png') no-repeat 50% 50%;
+  background: url('arrow-slider-left.png') no-repeat 50% 50%;
   left: 30%;
   background-color: #7EB01A;
 }
@@ -665,7 +665,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   background-color: #383838;
 }
 .flex-direction-nav .flex-next {
-  background: url('../images/arrow-slider-right.png') no-repeat 50% 50%;
+  background: url('arrow-slider-right.png') no-repeat 50% 50%;
   right: 30%;
   background-color: #7EB01A;
 }
@@ -691,7 +691,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   }
   .flex-direction-nav .flex-prev {
     left: 28%;
-  }  
+  }
   .flex-direction-nav a {
     top:87%;}
 }
@@ -701,7 +701,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   }
   .flex-direction-nav .flex-prev {
     left: 23%;
-  }  
+  }
   .flex-direction-nav a {
     top:83%;}
 }
@@ -711,7 +711,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   }
   .flex-direction-nav .flex-prev {
     left: 23%;
-  }  
+  }
   .flex-direction-nav a {
     top:80%;}
 }
@@ -721,7 +721,7 @@ background-image: -ms-linear-gradient(bottom, rgb(242,242,242) 12%, rgb(255,255,
   }
   .flex-direction-nav .flex-prev {
     left: 23%;
-  }  
+  }
   .flex-direction-nav a {
     top:70%;
 	display:none;
@@ -1037,13 +1037,13 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   margin-left: -34px;
 }
 .ico_zoom span {
-  background: url(../images/icon_zoom.png) no-repeat 0 0;
+  background: url(icon_zoom.png) no-repeat 0 0;
 }
 .ico_link {
   margin-left: 17px;
 }
 .ico_link span {
-  background: url(../images/icon_link.png) no-repeat 0 0;
+  background: url(icon_link.png) no-repeat 0 0;
 }
 /* Isotope CSS3 transitions
 /* ========================================================================== */
@@ -2325,9 +2325,9 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
   filter: alpha(opacity = 0);
   opacity: 0;
-  background-image:url("../images/icon_zoom.png");
+  background-image:url("icon_zoom.png");
   background-position: center center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
 .media a:hover .frame-overlay,
 .thumbnail:hover .frame-overlay,
@@ -2388,12 +2388,12 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   background-color: #F0F0F0;
   border:1px solid #d9d9d9;
   border-top:0px;
-  font-weight:600;  
+  font-weight:600;
 }
 .pricing .pricing-price small {
   display: inline;
   color: #333;
-  font-weight:100;  
+  font-weight:100;
 }
 .pricing .pricing-list {
   list-style-type: none;
@@ -2403,7 +2403,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   border-right: 1px solid #D9D9D9;
   color: #000000;
   padding:0 15px;
-  margin-bottom:0;  
+  margin-bottom:0;
 }
 .pricing .pricing-list li {
   padding: 5px 0;
@@ -2531,7 +2531,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   margin-bottom: 30px;
 }
 @media (max-width: 767px) {
-  
+
 }
 #footer .footer-banners .fb-inner {
   padding: 20px;
@@ -2638,13 +2638,13 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   background-position: 0 -30px;
 }
 #footer .social a.facebook {
-  background: url("../images/fi-facebook.png") no-repeat 0 0;
+  background: url("fi-facebook.png") no-repeat 0 0;
 }
 #footer .social a.twitter2 {
-  background: url("../images/fi-twitter.png") no-repeat 0 0;
+  background: url("fi-twitter.png") no-repeat 0 0;
 }
 #footer .social a.google-plus {
-  background: url("../images/fi-google-plus.png") no-repeat 0 0;
+  background: url("fi-google-plus.png") no-repeat 0 0;
 }
 #footer .social a:hover {
   background-position: 0 -30px;
@@ -2784,7 +2784,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   border-bottom: 1px dotted #CCCCCC;
 }
 .categories-widget ul.icons a {
-    background: url("../images/earrow-right.png") no-repeat scroll left 50% transparent;
+    background: url("earrow-right.png") no-repeat scroll left 50% transparent;
     color: #383838;
     display: block;
     padding: 5px 0 5px 21px;
@@ -2975,7 +2975,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   cursor: pointer;
   border: none !important;
   z-index: 2;
-  background: #e5e5e5 url('../images/search-bt.png') no-repeat center center;
+  background: #e5e5e5 url('search-bt.png') no-repeat center center;
 }
 #search .search-bt:hover {
 
@@ -3126,22 +3126,22 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   background-position: 0 -30px;
 }
 .works .thumbnail .icons a.facebook {
-  background: url("../images/fi-facebook.png") no-repeat 0 0;
+  background: url("fi-facebook.png") no-repeat 0 0;
 }
 .works .thumbnail .icons a.twitter2 {
-  background: url("../images/fi-twitter.png") no-repeat 0 0;
+  background: url("fi-twitter.png") no-repeat 0 0;
 }
 .works .thumbnail .icons a.google-plus {
-  background: url("../images/fi-google-plus.png") no-repeat 0 0;
+  background: url("fi-google-plus.png") no-repeat 0 0;
 }
 .works .members .icons a.facebook {
-  background: url("../images/si-facebook.png") no-repeat 0 0;
+  background: url("si-facebook.png") no-repeat 0 0;
 }
 .works .members .icons a.twitter2 {
-  background: url("../images/si-twitter.png") no-repeat 0 0;
+  background: url("si-twitter.png") no-repeat 0 0;
 }
 .works .members .icons a.google-plus {
-  background: url("../images/si-googleplus.png") no-repeat 0 0;
+  background: url("si-googleplus.png") no-repeat 0 0;
 }
 .works .thumbnail .icons a:hover {
   background-position: 0 -30px;
@@ -3187,7 +3187,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
 }
 .works .thumbnail .meta {
   float:left;
-  width:41px;  
+  width:41px;
   padding:0px 5px 15px 0px;
 }
 .works .thumbnail .meta .block  {
@@ -3269,7 +3269,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
 /* ========================================================================== */
 .testimonials .testimonial .content {
   position: relative;
-  background: #f7f7f7 url('../images/quote.png') no-repeat 5px 10px;
+  background: #f7f7f7 url('quote.png') no-repeat 5px 10px;
   border: 1px solid #E5E5E5;
   margin-bottom: 11px;
   padding: 15px 15px 15px 41px;
@@ -3299,7 +3299,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
 .testimonials .testimonial .quote-arrow {
   width: 12px;
   height: 7px;
-  background: url('../images/quote-arrow.png') no-repeat 50% 50%;
+  background: url('quote-arrow.png') no-repeat 50% 50%;
   position: absolute;
   bottom: -7px;
   left: 18px;
@@ -3344,7 +3344,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
   right: 20px;
 }
 .testimonials .carousel-control:hover {
-  
+
 }
 .testimonials .carousel-control i {
   width: 19px;
@@ -3396,7 +3396,7 @@ section.breadcrumbs .form-search input[type="text"]:focus {
 #sidebar .twitter dd {
   margin-left: 0;
   padding: 0 0 0 23px;
-  background: transparent url('../images/twitter.png') no-repeat 0 3px;
+  background: transparent url('twitter.png') no-repeat 0 3px;
 }
 #sidebar .twitter dl {
   padding-bottom: 0;
@@ -3746,7 +3746,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
   border-bottom: 1px solid #eee;
   float:right;
   width:90%;
-  
+
 }
 .comments .comments_li:last-child .textarea{
   border:0;
@@ -3779,7 +3779,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .comments .comments-list {
   margin-left: 0;
   margin-bottom: 20px;
-  padding-top: 20px;  
+  padding-top: 20px;
 }
 .comments li {
   list-style: none;
@@ -3846,15 +3846,15 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
   }
 }
 @media (max-width: 767px) {
-  
+
 }
 @media (max-width: 480px) {
-  
+
 }
 /* Back to Top
 /* ========================================================================== */
 #toTop {
-  background: rgba(0, 0, 0, 0.7) url('../images/totop.png') no-repeat scroll 50% 50%;
+  background: rgba(0, 0, 0, 0.7) url('totop.png') no-repeat scroll 50% 50%;
   color: #ffffff;
   position: fixed;
   right: 0px;
@@ -3873,7 +3873,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
   background-color: #7EB01A;
 }
 #toTopHover {
-  background: #7EB01A url('../images/totop.png') no-repeat scroll 50% 50%;
+  background: #7EB01A url('totop.png') no-repeat scroll 50% 50%;
   display: block;
   overflow: hidden;
   float: left;
@@ -3988,7 +3988,7 @@ address ul.icons li [class^="icon-"], address ul.icons li [class*=" icon-"] {
 }
 #emenu ul li {
   list-style:none;
-  background: url("../images/earrow-right.png") no-repeat scroll left 50% transparent;
+  background: url("earrow-right.png") no-repeat scroll left 50% transparent;
   padding-left: 11px;
 }
 .clients .clist {

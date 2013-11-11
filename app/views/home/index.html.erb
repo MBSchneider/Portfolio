@@ -8,42 +8,19 @@
     <title>Constrution</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;"/>
-    <link rel="shortcut icon" href="images/favicon.ico"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png"/>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css"/>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-    <!--[if IE 7]>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css"/>
-    <![endif]-->
+    <% # MATT ADDITION %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "sequencejs" %>
+    <%= javascript_include_tag "sequence.jquery-min.js" %>
+    <%= javascript_include_tag "sequencejs-options.js" %>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/superfish.js"></script>
-    <script type="text/javascript" src="js/hoverIntent.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
-    <script type="text/javascript" src="js/jflickrfeed.min.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
-    <script type="text/javascript" src="js/jquery.tweet.js"></script>
-    <script type="text/javascript" src="js/smoothscroll.js"></script>
-    <script type="text/javascript" src="js/jquery.ui.totop.js"></script>
-    <script type="text/javascript" src="js/ajax-mail.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" media="screen" href="css/sequencejs.css"/>
-    <script src="js/sequence.jquery-min.js"></script>
-    <script src="js/sequencejs-options.js"></script>
-
+    <link rel="shortcut icon" href="<%= image_path("favicon.ico") %>"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= image_path("apple-touch-icon-144-precomposed.png") %>"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= image_path("apple-touch-icon-114-precomposed.png") %>"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= image_path("apple-touch-icon-72-precomposed.png") %>"/>
+    <link rel="apple-touch-icon-precomposed" href="<%= image_path("apple-touch-icon-57-precomposed.png") %>"/>
 </head>
 
 <body>
@@ -150,17 +127,17 @@
                             <li>
                                 <h2 class="title"><span>Responsive Layout</span></h2>
                                 <h3 class="subtitle"><span>Homepage with parallax slider</span></h3>
-                                <img class="img-bg" src="example/blog1.jpg" alt="" />
+                                <img class="img-bg" src="<%= image_path("blog1.jpg") %>" />
                             </li>
                             <li>
                                 <h2 class="title"><span>Responsive Layout</span></h2>
                                 <h3 class="subtitle"><span>Homepage with parallax slider</span></h3>
-                                <img class="img-bg" src="example/blog2.jpg" alt="" />
+                                <img class="img-bg" src="<%= image_path("blog2.jpg") %>" alt="" />
                             </li>
                             <li>
                                 <h2 class="title"><span>Responsive Layout</span></h2>
                                 <h3 class="subtitle"><span>Homepage with parallax slider</span></h3>
-                                <img class="img-bg" src="example/blog3.jpg" alt="" />
+                                <img class="img-bg" src="<%= image_path("blog3.jpg") %>" alt="" />
                             </li>
                         </ul>
                     </div>
@@ -234,7 +211,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest1.jpg" alt="">
+							<%= image_tag "latest1.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<h4 class="title">Portfolio Item #1</h4>
@@ -244,7 +221,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest2.jpg" alt="">
+							<%= image_tag "latest2.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<h4 class="title">Portfolio Item #2</h4>
@@ -254,7 +231,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest3.jpg" alt="">
+							<%= image_tag "latest3.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<h4 class="title">Portfolio Item #3</h4>
@@ -264,7 +241,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest4.jpg" alt="">
+							<%= image_tag "latest4.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<h4 class="title">Portfolio Item #4</h4>
@@ -282,7 +259,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest1.jpg" alt="">
+							<%= image_tag "latest1.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<div class="meta">
@@ -298,7 +275,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest2.jpg" alt="">
+							<%= image_tag "latest2.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<div class="meta">
@@ -314,7 +291,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest3.jpg" alt="">
+							<%= image_tag "latest3.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<div class="meta">
@@ -330,7 +307,7 @@
 				<li class="span3 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
-							<img src="example/latest4.jpg" alt="">
+							<%= image_tag "latest4.jpg" %>
 							<span class="frame-overlay"></span>
 						</a>
 						<div class="meta">
@@ -360,7 +337,7 @@
 		<h2 class="underline">Nullam diam felis</h2>
 		<div class="media">
 			<a class="pull-left" href="./blog-single.html">
-				<img class="media-object" src="example/sidebar1.jpg" alt=""/>
+				<%= image_tag "sidebar1.jpg", class: "media-object" %>
 				<span class="frame-overlay"></span>
 			</a>
 			<div class="media-body">
@@ -372,7 +349,7 @@
 		</div>
 		<div class="media">
 			<a class="pull-left" href="./blog-single.html">
-				<img class="media-object" src="example/sidebar2.jpg" alt=""/>
+        <%= image_tag "sidebar2.jpg", class: "media-object" %>
 				<span class="frame-overlay"></span>
 			</a>
 			<div class="media-body">

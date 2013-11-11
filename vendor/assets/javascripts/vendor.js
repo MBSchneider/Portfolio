@@ -1,1 +1,13 @@
-//= require_tree .
+//= require bootstrap.min.js
+//= require jquery.easing.1.3.js
+//= require superfish.js
+//= require hoverIntent.js
+//= require jquery.flexslider.js
+//= require jflickrfeed.min.js
+//= require jquery.prettyPhoto.js
+//= require jquery.elastislide.js
+//= require jquery.tweet.js
+//= require smoothscroll.js
+//= require jquery.ui.totop.js
+//= require ajax-mail.js
+//= require main.js
