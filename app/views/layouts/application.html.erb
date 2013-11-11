@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+
 <head>
-  <title>Portfolio</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Matt Schneider</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;"/>
+
+  <% # MATT ADDITION %>
+  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "sequencejs" %>
+  <%= javascript_include_tag "sequence.jquery-min.js" %>
+  <%= javascript_include_tag "sequencejs-options.js" %>
+
+  <link rel="shortcut icon" href="<%= image_path("favicon.ico") %>"/>
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= image_path("apple-touch-icon-144-precomposed.png") %>"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= image_path("apple-touch-icon-114-precomposed.png") %>"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= image_path("apple-touch-icon-72-precomposed.png") %>"/>
+  <link rel="apple-touch-icon-precomposed" href="<%= image_path("apple-touch-icon-57-precomposed.png") %>"/>
+
   <%= csrf_meta_tags %>
+  <%= yield :head %>
 </head>
 <body>
 <%= render 'layouts/navbar' %>
@@ -14,9 +33,9 @@
   </div>
 <% end %>
 
-<div class="container">
 <%= yield %>
-</div>
+
+<%= render 'layouts/footer' %>
 
 </body>
 </html>

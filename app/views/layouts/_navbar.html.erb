@@ -1,48 +1,87 @@
-<nav class="navbar navbar-default" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Matt Schneider</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/home/index.html">Home</a></li>
-        <li><a href="/posts">Blog</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+<!-- start: Top Menu -->
+<div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#"> <span class="logo-text">matt schneider</span> <small>ruby on rails developer</small></a>
+      <span class="langaddr">
+      <address class="pull-left">
+        <i class="icon-envelope"></i> <a href="mailto:schneider.matthew.b@gmail.com">schneider.matthew.b@gmail.com</a>
+        <i class="icon-phone"></i> (206) 276-7942
+      </address>
+      <div class="pull-right">
+<% #HIDDEN %>
+        <div class="btn-group hide">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+          English
+          <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
+            <li class="fr"><a href="#">Francais</a></li>
+            <li class="es"><a href="#">Spanish</a></li>
+            <li class="de"><a href="#">Dutch</a></li>
+            <li class="it"><a href="#">Italiano</a></li>
           </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user.present? %>
-        <li> <a><%= current_user.email %> </a></li>
-        <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-      <% else %>
-      <li><a href="/users/sign_up">Sign Up</a></li>
-      <li><a href="/users/sign_in">Sign In</a></li>
 
-      <li><%= link_to user_omniauth_authorize_path(:twitter) do %>
-        Sign in through Twitter<%= image_tag "bird_blue_48.png", :size => "22x22", :class => "img-nav-decrease-margin" %>
-        <% end %>
-      </li>
-      <% end %>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+        </div>
+      </div>
+      </span>
+        </div>
+        <div class="container navi">
+        <ul class="nav">
+                <li class="dropdown active"><%= link_to "Home", controller: "home", action: "index" %>
+<% #HIDDEN %>
+                <li class="dropdown hide">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="./about.html">
+                        Features</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Our Services</a></li>
+                        <li><a href="./full-width.html">Full Width</a></li>
+                        <li><a href="./font-icons.html">All Icons</a></li>
+                        <li><a href="./price-table.html">Price Table</a></li>
+                        <li><a href="./404.html">404 Page not found</a></li>
+                    </ul>
+                </li>
+<% #HIDDEN %>
+                <li class="dropdown hide">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="./bs-scaffolding.html">
+                        Bootstrap Styles</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./bs-scaffolding.html">Scaffolding</a></li>
+                        <li><a href="./bs-base-css.html">Base CSS</a></li>
+                        <li><a href="./bs-components.html">Components</a></li>
+                        <li><a href="./bs-javascript.html">JavaScript</a></li>
+                    </ul>
+                </li>
 
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="./portfolio.html">
+                        Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><%= link_to "Projects", projects_path %></li>
+                        <li><a href="./portfolio-single.html">Single Portfolio</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="./blog-sidebar-right.html">Blog</a>
+                    <ul class="dropdown-menu">
+                        <li><%= link_to "Blog", posts_path %></li>
+                        <li><a href="./blog-single.html">Blog Single</a></li>
+                    </ul>
+                </li>
+                <li><%= link_to "Contact", controller: "home", action: "contact" %></li>
+            </ul>
+<% #HIDDEN %>
+      <div class="pull-right hide">
+        <section class="search clearfix">
+          <form id="search" class="input-append">
+            <input id="appendedInputButton" type="text" size="16" value="Search..." name="search site" onfocus="if(this.value=='Search...') this.value=''" onblur="if(this.value=='') this.value='Search...'">
+            <input class="btn search-bt" type="submit" name="submit" value="">
+          </form>
+        </section>
+      </div>
+        </div>
 
-
-
+    </div>
+</div>
+<!-- end: Top Menu -->
