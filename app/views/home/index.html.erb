@@ -1,112 +1,8 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
-
 <head>
-    <title>Constrution</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;"/>
 
-    <% # MATT ADDITION %>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
-    <%= stylesheet_link_tag "sequencejs" %>
-    <%= javascript_include_tag "sequence.jquery-min.js" %>
-    <%= javascript_include_tag "sequencejs-options.js" %>
-
-    <link rel="shortcut icon" href="<%= image_path("favicon.ico") %>"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= image_path("apple-touch-icon-144-precomposed.png") %>"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= image_path("apple-touch-icon-114-precomposed.png") %>"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= image_path("apple-touch-icon-72-precomposed.png") %>"/>
-    <link rel="apple-touch-icon-precomposed" href="<%= image_path("apple-touch-icon-57-precomposed.png") %>"/>
 </head>
 
 <body>
-
-<!-- start: Top Menu -->
-<div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="#"> <span class="logo-text">constrution</span> <small>Responsive Theme</small></a>
-			<span class="langaddr">
-			<address class="pull-left">
-				<i class="icon-envelope"></i> <a href="mailto:info@site.com">info@site.com</a>
-				<i class="icon-phone"></i> (123) 456-7890
-			</address>
-			<div class="pull-right">
-				<div class="btn-group">
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-					English
-					<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li class="fr"><a href="#">Francais</a></li>
-						<li class="es"><a href="#">Spanish</a></li>
-						<li class="de"><a href="#">Dutch</a></li>
-						<li class="it"><a href="#">Italiano</a></li>
-					</ul>
-				</div>
-			</div>
-			</span>
-        </div>
-        <div class="container navi">
-		    <ul class="nav">
-                <li class="dropdown active"><a href="./index.html">Home</a>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./about.html">
-                        Features</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./services.html">Our Services</a></li>
-                        <li><a href="./full-width.html">Full Width</a></li>
-                        <li><a href="./font-icons.html">All Icons</a></li>
-                        <li><a href="./price-table.html">Price Table</a></li>
-                        <li><a href="./404.html">404 Page not found</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./bs-scaffolding.html">
-                        Bootstrap Styles</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./bs-scaffolding.html">Scaffolding</a></li>
-                        <li><a href="./bs-base-css.html">Base CSS</a></li>
-                        <li><a href="./bs-components.html">Components</a></li>
-                        <li><a href="./bs-javascript.html">JavaScript</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./portfolio.html">
-                        Portfolio</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./portfolio.html">Portfolio</a></li>
-                        <li><a href="./portfolio-single.html">Single Portfolio</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./blog-sidebar-right.html">Blog</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./blog-sidebar-right.html">Blog</a></li>
-                        <li><a href="./blog-single.html">Blog Single</a></li>
-                    </ul>
-                </li>
-                <li><a href="./contact.html">Contacts</a></li>
-            </ul>
-			<div class="pull-right">
-				<section class="search clearfix">
-					<form id="search" class="input-append">
-						<input id="appendedInputButton" type="text" size="16" value="Search..." name="search site" onfocus="if(this.value=='Search...') this.value=''" onblur="if(this.value=='') this.value='Search...'">
-						<input class="btn search-bt" type="submit" name="submit" value="">
-					</form>
-				</section>
-			</div>
-        </div>
-
-    </div>
-</div>
-<!-- end: Top Menu -->
-
 <!-- start: Container -->
 <div class="container">
 
@@ -125,19 +21,29 @@
                         <span class="next"><i class="icon-angle-right"></i></span>
                         <ul>
                             <li>
-                                <h2 class="title"><span>Responsive Layout</span></h2>
-                                <h3 class="subtitle"><span>Homepage with parallax slider</span></h3>
-                                <img class="img-bg" src="<%= image_path("blog1.jpg") %>" />
+                                <h2 class="title"><span>Las Vegas</span></h2>
+                                <h3 class="subtitle"><span>Overlooking the strip</span></h3>
+                                <img class="img-bg" src="<%= image_path("slider1.jpg") %>" />
                             </li>
                             <li>
-                                <h2 class="title"><span>Responsive Layout</span></h2>
-                                <h3 class="subtitle"><span>Homepage with parallax slider</span></h3>
-                                <img class="img-bg" src="<%= image_path("blog2.jpg") %>" alt="" />
+                                <h2 class="title"><span>Hawaii</span></h2>
+                                <h3 class="subtitle"><span>Southernmost point in the US (Ka Lae)</span></h3>
+                                <img class="img-bg" src="<%= image_path("slider6.jpg") %>" alt="" />
                             </li>
                             <li>
-                                <h2 class="title"><span>Responsive Layout</span></h2>
-                                <h3 class="subtitle"><span>Homepage with parallax slider</span></h3>
-                                <img class="img-bg" src="<%= image_path("blog3.jpg") %>" alt="" />
+                                <h2 class="title"><span>Green Lake</span></h2>
+                                <h3 class="subtitle"><span>Enjoying some rare sunshine</span></h3>
+                                <img class="img-bg" src="<%= image_path("slider3.jpg") %>" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="title"><span>At the parents</span></h2>
+                                <h3 class="subtitle"><span>With man's best friend</span></h3>
+                                <img class="img-bg" src="<%= image_path("slider4.jpg") %>" alt="" />
+                            </li>
+                            <li>
+                                <h2 class="title"><span>Getting away</span></h2>
+                                <h3 class="subtitle"><span>Lake Cavinaugh, WA</span></h3>
+                                <img class="img-bg" src="<%= image_path("slider5.jpg") %>" alt="" />
                             </li>
                         </ul>
                     </div>
@@ -169,35 +75,35 @@
         </div>
 
 
-		<h2 class="underline">Our Services <small>- <a href="#">View All Posts >></a></small></h2>
+		<h2 class="underline">Proficiencies <small class="hide">- <a href="#">View All Posts >></a></small></h2>
 		<div class="row-fluid works">
 			<ul class="thumbnails">
 				<li class="span3 item">
 					<div class="thumbnail os">
-						<i class="icon-zoom-in"></i>
-						<h4 class="title">Responsive Layouts</h4>
-						<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<i class="icon-laptop"></i>
+						<h4 class="title">Ruby on Rails</h4>
+						<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 					</div>
 				</li>
 				<li class="span3 item">
 					<div class="thumbnail os">
-						<i class="icon-sitemap"></i>
-						<h4 class="title">HTML5 & CSS3 Code</h4>
-						<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<i class="icon-bar-chart"></i>
+						<h4 class="title">HTML & CSS</h4>
+						<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 					</div>
 				</li>
 				<li class="span3 item">
 					<div class="thumbnail os">
-						<i class="icon-print"></i>
-						<h4 class="title">Clean Design</h4>
-						<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<i class="icon-coffee"></i>
+						<h4 class="title">Javascript & Coffeescript</h4>
+						<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 					</div>
 				</li>
 				<li class="span3 item">
 					<div class="thumbnail os">
-						<i class="icon-unlock"></i>
-						<h4 class="title">CMS-Driven Websites</h4>
-						<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<i class="icon-cogs"></i>
+						<h4 class="title">Python</h4>
+						<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 					</div>
 				</li>
 			</ul>
@@ -205,30 +111,20 @@
 
 		<hr class="transparent"/>
 
-		<h2 class="underline">Selected Projects <small>- <a href="#">View All Posts >></a></small></h2>
+		<h2 class="underline">Selected Projects <small>- <a href="#">View All Projects >></a></small></h2>
 		<div class="row-fluid works">
 			<ul class="thumbnails">
-				<li class="span3 item">
+				<li class="span4 item">
 					<div class="thumbnail">
-						<a href="./portfolio-single.html" class="image">
-							<%= image_tag "latest1.jpg" %>
+						<a href="http://www.toppotty.com" target="_blank" class="image">
+							<%= image_tag "toppotty.png" %>
 							<span class="frame-overlay"></span>
 						</a>
-						<h4 class="title">Portfolio Item #1</h4>
-						<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<h4 class="title">toppotty</h4>
+						<p class="description">Find and rate local restrooms. </p>
 					</div>
 				</li>
-				<li class="span3 item">
-					<div class="thumbnail">
-						<a href="./portfolio-single.html" class="image">
-							<%= image_tag "latest2.jpg" %>
-							<span class="frame-overlay"></span>
-						</a>
-						<h4 class="title">Portfolio Item #2</h4>
-						<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					</div>
-				</li>
-				<li class="span3 item">
+				<li class="span4 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
 							<%= image_tag "latest3.jpg" %>
@@ -238,7 +134,7 @@
 						<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
 					</div>
 				</li>
-				<li class="span3 item">
+				<li class="span4 item">
 					<div class="thumbnail">
 						<a href="./portfolio-single.html" class="image">
 							<%= image_tag "latest4.jpg" %>
@@ -253,7 +149,7 @@
 
 		<hr class="transparent"/>
 
-		<h2 class="underline">Latest Posts <small>- <a href="#">View All Posts >></a></small></h2>
+		<h2 class="underline">Latest Blog Posts <small>- <a href="#">View All Posts >></a></small></h2>
 		<div class="row-fluid works">
 			<ul class="thumbnails">
 				<li class="span3 item">
@@ -330,7 +226,8 @@
     <div class="row">
 
     <!-- start: Page section -->
-    <section class="span6">
+<% # HIDE %>
+    <section class="span6 hide">
 
     <!-- start: posts-->
 
@@ -362,7 +259,8 @@
     <!-- end: posts-->
 
     </section>
-    <section class="span6">
+<% # HIDE %>
+    <section class="span6 hide">
 
     <!-- start: posts-->
 		<h2 class="underline">Client Testimonials <small> - <a href="#">View All Testimonials »</a></small></h2>
@@ -449,105 +347,6 @@
 
 </div>
 <!-- end: Container -->
-
-<!-- start: Footer -->
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-			<hr class="transparent"/>
-            <div class="span3">
-                <h3 class="widget-title">About Us</h3>
-                <div class="widget-inner">
-                    <p>
-                        Nunc consectetur ornare dolor, eget rutrum justo semper ac. Donec vel molestie tortor.
-                        Vivamus luctus, nibh id fermentum imperdiet, sapien nisi imperdiet nibh.
-                    </p>
-					<p>
-                        Nunc consectetur ornare dolor, eget rutrum justo semper ac. Donec vel molestie tortor.
-                        Vivamus luctus, nibh id fermentum imperdiet, sapien nisi imperdiet nibh.
-                    </p>
-				</div>
-            </div>
-            <div class="span3">
-                <h3 class="widget-title">Latest Posts</h3>
-                <div class="widget-inner lates-blog-post">
-                    <div class="media">
-                        <i class="icon-pencil media-object"></i>
-                        <div class="media-body">
-                            <a href="#">Aliquam nunc erat, suscipit molestie interdum eget, molestie vel eros</a>
-                            <div class="date">2 days ago</div>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <i class="icon-pencil media-object"></i>
-                        <div class="media-body">
-                            <a href="#">Aenean a sapien in magna luctus aliquet in eu purus. Sed venenatis luctus varius</a>
-                            <div class="date">5 days ago</div>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <i class="icon-pencil media-object"></i>
-                        <div class="media-body">
-                            <a href="#">Sed a rhoncus mi. Morbi eu elit sapien, eu adipiscing nisl. Duis in turpis et mi molestie bibendum eget eget mauris</a>
-                            <div class="date">1 months ago</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="span3">
-                <h3 class="widget-title">latest Tweets</h3>
-                <!-- start: Twitter Widget -->
-                <div id="twitter-foot"></div>
-                <!-- end: Twitter Widget -->
-            </div>
-            <div class="span3">
-                <h3 class="widget-title">Contact Info</h3>
-                <div class="widget-inner">
-                    <p>
-                        Nunc consectetur ornare dolor, eget rutrum justo semper ac. Donec vel molestie tortor.
-                        Vivamus luctus, nibh id fermentum imperdiet, sapien nisi imperdiet nibh.
-                    </p>
-                    <address>
-                        <div class="row-fluid">
-                            <div class=""><i class="icon-home"></i> <strong>Address:</strong>London, 90210</div>
-                            <div class=""><i class="icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</div>
-                            <div class=""><i class="icon-envelope"></i> <strong>Email:</strong> <a href="mailto:#">info@email.com</a></div>
-                        </div>
-                    </address>
-					<h4 class="socialh">Latest Posts</h4>
-                    <ul class="social clearfix">
-                        <li><a href="http://www.facebook.com/pages/dxthemescom/559921474037790#" class="facebook" data-original-title="Facebook" data-placement="top" rel="tooltip"></a></li>
-                        <li><a href="https://twitter.com/dxthemes" class="twitter2" data-original-title="Twitter" data-placement="top" rel="tooltip"></a></li>
-                        <li><a href="#" class="google-plus" data-original-title="Google+" data-placement="top" rel="tooltip"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- end: Footer -->
-
-<!-- start: Footer menu-->
-<section id="footer-menu">
-    <div class="container">
-        <div class="row">
-            <div class="span4">
-                <p class="copyright">&copy; Copyright 2013. Powered by <a href="http://dxthemes.com/">DX Themes</a>.</p>
-            </div>
-            <div class="span8 hidden-phone">
-                <ul class="pull-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end: Footer menu-->
 
 </body>
 </html>
