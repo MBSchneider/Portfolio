@@ -83,7 +83,7 @@
 }
 #sequence-theme .prev {
   left: 94.9%;
-  left: 93.7% \0/;
+  left: 93.7%;
   top: 100%;
 }
 #sequence-theme .next {
@@ -93,17 +93,17 @@
 @media (min-width: 980px) and (max-width:1199px) {
   #sequence-theme .prev {
     left: 93.5%;
-  }  
+  }
 }
 @media (min-width: 768px) and (max-width:979px) {
   #sequence-theme .prev {
     left: 91.5%;
-  } 
+  }
 }
 @media (min-width: 460px) and (max-width:767px) {
   #sequence-theme .prev {
     left: 87%;
-  } 
+  }
 }
 #sequence-theme .prev img,
 #sequence-theme .next img {
