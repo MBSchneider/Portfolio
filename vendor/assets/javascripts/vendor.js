@@ -11,3 +11,5 @@
 //= require jquery.ui.totop.js
 //= require ajax-mail.js
 //= require main.js
+//= require sequence.jquery-min.js
+//= require sequencejs-options.js
