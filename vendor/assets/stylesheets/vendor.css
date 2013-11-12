@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap.css
-
+ *= require style.css
  *= require prettyPhoto.css
  *= require font-awesome.min.css
  */
