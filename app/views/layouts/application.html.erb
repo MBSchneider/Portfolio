@@ -30,10 +30,14 @@
     <%= flash[key] %>
   </div>
 <% end %>
-
-<%= yield %>
-
-<%= render 'layouts/footer' %>
+<div class="container">
+  <%= yield %>
+</div>
+<footer id="footer">
+  <div class="container">
+    <%= render 'layouts/footer' %>
+  </div>
+</footer>
 
 </body>
 </html>

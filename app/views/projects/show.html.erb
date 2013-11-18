@@ -7,6 +7,9 @@
 <b>Technologies used:</b>
 <%= @project.technologies_used %>
 </p>
+<% if @project.image %>
+  <td><%= image_tag image-url(@project.image) %>
+<% end %>
 
 <%= render 'comments/index' %>
 

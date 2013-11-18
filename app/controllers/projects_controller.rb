@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @projects = Project.all
@@ -10,6 +11,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(params[:project])
+    binding.pry
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }

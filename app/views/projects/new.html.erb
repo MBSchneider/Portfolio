@@ -12,7 +12,8 @@
 </div>
 <% end %>
 
-<%= form_for(@project) do |f| %>
+<%= form_for @project, :html => {:multipart => true} do |f| %>
+
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -20,6 +21,9 @@
   <div class="field">
     <%= f.label :technologies_used %><br />
     <%= f.text_field :technologies_used %>
+  </div>
+  <div class="field">
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>
