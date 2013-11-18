@@ -18,6 +18,7 @@ gem 'pry-rails'
 gem 'omniauth-twitter'
 gem 'figaro'
 gem 'travis'
+gem 'newrelic_rpm'
 
 gem 'rails', '3.2.14'
 
