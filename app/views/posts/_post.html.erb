@@ -1,0 +1,27 @@
+<div id="<%= dom_id(post) %>">
+  <% if policy(post).show? %>
+    <p>
+      <strong><%= post.title %>
+      <% unless post.published? %>
+        <span style="color:red">
+          - Unpublished
+        </span>
+      <% end %></strong>
+    </p>
+    <p><%= post.content %></p>
+  <% end %>
+
+  <table>
+    <tr>
+      <% if policy(post).show? %>
+        <td><%= button_to 'Show', post, :method => "get", class: "btn" %></td>
+      <% end %>
+      <% if policy(post).update? %>
+        <td><%= button_to 'Edit', edit_post_path(post), :method => "get", class: "btn btn-primary" %></td>
+      <% end %>
+      <% if policy(post).destroy? %>
+        <td><%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, class: "btn btn-danger" %></button></td>
+      <% end %>
+    </tr>
+  </table>
+</div>

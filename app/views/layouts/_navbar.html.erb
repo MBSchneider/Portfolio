@@ -1,87 +1,75 @@
 <!-- start: Top Menu -->
 <div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="#"> <span class="logo-text">matt schneider</span> <small>ruby on rails developer</small></a>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#"> <span class="logo-text">matt schneider</span> <small>ruby on rails developer</small></a>
       <span class="langaddr">
-      <address class="pull-left">
-        <i class="icon-envelope"></i> <a href="mailto:schneider.matthew.b@gmail.com">schneider.matthew.b@gmail.com</a>
-        <i class="icon-phone"></i> (206) 276-7942
-      </address>
-      <div class="pull-right">
-<% #HIDDEN %>
-        <div class="btn-group hide">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-          English
-          <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="fr"><a href="#">Francais</a></li>
-            <li class="es"><a href="#">Spanish</a></li>
-            <li class="de"><a href="#">Dutch</a></li>
-            <li class="it"><a href="#">Italiano</a></li>
-          </ul>
+        <address class="pull-left">
 
-        </div>
-      </div>
-      </span>
-        </div>
-        <div class="container navi">
-        <ul class="nav">
-                <li class="dropdown active"><%= link_to "Home", "home" %>
-<% #HIDDEN %>
-                <li class="dropdown hide">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./about.html">
-                        Features</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./services.html">Our Services</a></li>
-                        <li><a href="./full-width.html">Full Width</a></li>
-                        <li><a href="./font-icons.html">All Icons</a></li>
-                        <li><a href="./price-table.html">Price Table</a></li>
-                        <li><a href="./404.html">404 Page not found</a></li>
-                    </ul>
-                </li>
-<% #HIDDEN %>
-                <li class="dropdown hide">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./bs-scaffolding.html">
-                        Bootstrap Styles</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./bs-scaffolding.html">Scaffolding</a></li>
-                        <li><a href="./bs-base-css.html">Base CSS</a></li>
-                        <li><a href="./bs-components.html">Components</a></li>
-                        <li><a href="./bs-javascript.html">JavaScript</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./portfolio.html">
-                        Projects</a>
-                    <ul class="dropdown-menu">
-                        <li><%= link_to "Projects", projects_path %></li>
-                        <li><a href="./portfolio-single.html">Single Portfolio</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="./blog-sidebar-right.html">Blog</a>
-                    <ul class="dropdown-menu">
-                        <li><%= link_to "Blog", posts_path %></li>
-                        <li><a href="./blog-single.html">Blog Single</a></li>
-                    </ul>
-                </li>
-                <li><%= link_to "Contact", "contact" %></li>
+          <i class="icon-envelope"></i> <a href="mailto:schneider.matthew.b@gmail.com">schneider.matthew.b@gmail.com</a>
+          <i class="icon-phone"></i> (206) 276-7942
+        </address>
+        <div class="pull-right">
+  <% #HIDDEN %>
+          <div class="btn-group hide">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            English
+            <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="fr"><a href="#">Francais</a></li>
+              <li class="es"><a href="#">Spanish</a></li>
+              <li class="de"><a href="#">Dutch</a></li>
+              <li class="it"><a href="#">Italiano</a></li>
             </ul>
-<% #HIDDEN %>
-      <div class="pull-right hide">
-        <section class="search clearfix">
-          <form id="search" class="input-append">
-            <input id="appendedInputButton" type="text" size="16" value="Search..." name="search site" onfocus="if(this.value=='Search...') this.value=''" onblur="if(this.value=='') this.value='Search...'">
-            <input class="btn search-bt" type="submit" name="submit" value="">
-          </form>
-        </section>
-      </div>
+          </div>
         </div>
+      </span>
+    </div>
+    <div class="container navi">
+      <ul class="nav">
+          <li><a>Under construction!</a></li>
+        <li class="active activation" id="homelink"><%= link_to "Home", "home" %></li>
+<% #HIDDEN %>
+        <li class="dropdown hide">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="./about.html">
+                    Features</a>
+          <ul class="dropdown-menu">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Our Services</a></li>
+            <li><a href="./full-width.html">Full Width</a></li>
+            <li><a href="./font-icons.html">All Icons</a></li>
+            <li><a href="./price-table.html">Price Table</a></li>
+            <li><a href="./404.html">404 Page not found</a></li>
+          </ul>
+        </li>
+<% #HIDDEN %>
+        <li class="dropdown hide">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="./bs-scaffolding.html">
+                Bootstrap Styles</a>
+            <ul class="dropdown-menu">
+                <li><a href="./bs-scaffolding.html">Scaffolding</a></li>
+                <li><a href="./bs-base-css.html">Base CSS</a></li>
+                <li><a href="./bs-components.html">Components</a></li>
+                <li><a href="./bs-javascript.html">JavaScript</a></li>
+            </ul>
+        </li>
+
+        <li class="activation" id="projectlink"><%= link_to "Projects", projects_path %></li>
+        <li class="activation" id="bloglink"><%= link_to "Blog", posts_path %></li>
+        <li class="activation" id="contactlink"><%= link_to "Contact", "contact" %></li>
+      </ul>
+
+
+<% #HIDDEN %>
+      <div class="pull-right">
+        <ul class="nav">
+
+        </ul>
+      </div>
 
     </div>
+
+  </div>
 </div>
 <!-- end: Top Menu -->

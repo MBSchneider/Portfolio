@@ -19,7 +19,13 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'travis'
 gem 'newrelic_rpm'
+
+# Uploading
 gem 'carrierwave'
+gem 'carrierwave_direct'
+gem 'rmagick'
+gem 'fog'
+gem 'sidekiq'
 
 gem 'rails', '3.2.14'
 
