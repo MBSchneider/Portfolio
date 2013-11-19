@@ -28,7 +28,7 @@
         </div>
         <div class="container navi">
         <ul class="nav">
-                <li class="dropdown active"><%= link_to "Home", controller: "home", action: "index" %>
+                <li class="dropdown active"><%= link_to "Home", "home" %>
 <% #HIDDEN %>
                 <li class="dropdown hide">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="./about.html">
@@ -69,7 +69,7 @@
                         <li><a href="./blog-single.html">Blog Single</a></li>
                     </ul>
                 </li>
-                <li><%= link_to "Contact", controller: "home", action: "contact" %></li>
+                <li><%= link_to "Contact", "contact" %></li>
             </ul>
 <% #HIDDEN %>
       <div class="pull-right hide">
