@@ -1,15 +1,18 @@
-<%= form_for @project do |f| %>
-  <!-- Validation code omitted -->
-
-  <%= f.hidden_field :key %>
-
-
-
-  <div class="field">
+<%= form_for @project, :html => {:multipart => true} do |f| %>
+  <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </p>
+  <p>
+    <%= f.label :technologies_used %><br />
+    <%= f.text_field :technologies_used %>
+  </p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.label :remote_image_url, "or image URL" %><br />
+    <%= f.text_field :remote_image_url %>
+  </p>
+  <p><%= f.submit %></p>
 <% end %>

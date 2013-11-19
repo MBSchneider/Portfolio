@@ -3,18 +3,19 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
-    @uploader = Project.new.image
-    @uploader.success_action_redirect = new_project_url
+    #@uploader = Project.new.image
+    #@uploader.success_action_redirect = new_project_url
   end
 
   def new
-    binding.pry
+
     @project = Project.new(key: params[:key])
+    binding.pry
   end
 
   def create
     @project = Project.new(params[:project])
-    binding.pry
+    #binding.pry
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }

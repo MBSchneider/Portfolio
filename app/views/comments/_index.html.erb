@@ -1,35 +1,31 @@
-<div class="row">
-  <div class="col-md-4">
-    <h4>Comments</h4>
+<h4>Comments</h4>
 
-    <table class="table">
-      <% @comments.each do |comment| %>
-        <tr id="<%= dom_id(comment) %>">
+<table class="table">
+  <% @comments.each do |comment| %>
+    <tr id="<%= dom_id(comment) %>">
+      <td>
+        <%= comment.body %><br />
+        <em><%= comment.author_email %></em>
+      </td>
+      <% if policy(comment).approve? %>
+
+        <% if comment.approved %>
           <td>
-            <%= comment.body %><br />
-            <em><%= comment.author_email %></em>
+            <%= button_to 'Remove approval', polymorphic_path([@commentable, comment], comment: { approved: false }), method: :put, class: "btn btn-warning btn-sm" %>
           </td>
-          <% if policy(comment).approve? %>
-
-            <% if comment.approved %>
-              <td>
-                <%= button_to 'Remove approval', polymorphic_path([@commentable, comment], comment: { approved: false }), method: :put, class: "btn btn-warning btn-sm" %>
-              </td>
-            <% else %>
-              <td>
-                <%= button_to 'Approve', polymorphic_path([@commentable, comment], comment: { approved: true }), method: :put, class: "btn btn-success btn-sm" %>
-
-              </td>
-            <% end %>
+        <% else %>
           <td>
-            <%= button_to 'X', [@commentable, comment], method: :delete, data: { confirm: 'Delete comment?' }, class: "btn btn-danger btn-sm" %>
+            <%= button_to 'Approve', polymorphic_path([@commentable, comment], comment: { approved: true }), method: :put, class: "btn btn-success btn-sm" %>
+
           </td>
-          <% elsif !comment.approved %>
-            <td><span style="color:red">Not yet approved</span></td>
-          <% end %>
-        </tr>
+        <% end %>
+      <td>
+        <%= button_to 'X', [@commentable, comment], method: :delete, data: { confirm: 'Delete comment?' }, class: "btn btn-danger btn-sm" %>
+      </td>
+      <% elsif !comment.approved %>
+        <td><span style="color:red">Not yet approved</span></td>
       <% end %>
-    </table>
-    <%= render 'comments/form' %>
-  </div>
-</div>
+    </tr>
+  <% end %>
+</table>
+<%= render 'comments/form' %>

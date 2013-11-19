@@ -25,11 +25,13 @@
 </head>
 <body>
 <%= render 'layouts/navbar' %>
-<% [:notice,:error,:info,:success,:alert].each do |key| %>
-  <div class="message">
-    <%= flash[key] %>
-  </div>
-<% end %>
+<div class="container">
+  <% [:notice,:error,:info,:success,:alert].each do |key| %>
+    <div class="message">
+      <%= flash[key] %>
+    </div>
+  <% end %>
+</div>
 <div class="container">
   <%= yield %>
 </div>
