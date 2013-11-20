@@ -26,6 +26,7 @@ gem 'carrierwave_direct'
 gem 'rmagick'
 gem 'fog'
 gem 'sidekiq'
+gem 'jquery-fileupload-rails'
 
 gem 'rails', '3.2.14'
 

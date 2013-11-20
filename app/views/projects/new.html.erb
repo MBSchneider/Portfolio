@@ -8,11 +8,10 @@
     <%= f.text_field :technologies_used %>
   </p>
   <p>
-    <%= f.file_field :image %>
+    <%= f.hidden_field :key %>
   </p>
   <p>
-    <%= f.label :remote_image_url, "or image URL" %><br />
-    <%= f.text_field :remote_image_url %>
+      <%= @project.image_name %>
   </p>
   <p><%= f.submit %></p>
 <% end %>
