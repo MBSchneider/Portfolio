@@ -10,7 +10,7 @@ A portfolio to show off my work!
 
 Added simple form, draper, time format to projects.  See screenshot below:
 
-![Screenshot 1]((https://raw.github.com/MBSchneider/Portfolio/master/app/assets/images/RailsViewUpdates.png)
+![Screenshot 1](https://raw.github.com/MBSchneider/Portfolio/master/app/assets/images/RailsViewUpdates.png)
 
 ## Authors
 
