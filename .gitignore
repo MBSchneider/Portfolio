@@ -19,3 +19,5 @@
 
 # Ignore simplecov
 /coverage
+
+*.DS_Store
