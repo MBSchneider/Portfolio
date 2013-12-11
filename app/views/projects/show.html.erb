@@ -6,12 +6,14 @@
 </br>
 <b>Technologies used:</b>
 <%= @project.technologies_used %>
+<br />
+<b>Created:</b>
+<%= @project.created_at.to_s(:proj_time)  %>
 </p>
-<% if @project.image_processed? %>
-  <%= image_tag @project.image_url(:thumb) if @project.image? %>
-<% else %>
-  <em>processing...</ed>
-<% end %>
+<%= @project.decorate_image %>
+<br />
+
+
 
 <br />
 <br />

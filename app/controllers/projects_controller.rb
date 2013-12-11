@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = ProjectDecorator.find(params[:id])
     @commentable = @project
     @comments = policy_scope(@commentable.comments)
     @comment = Comment.new

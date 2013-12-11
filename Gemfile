@@ -20,6 +20,9 @@ gem 'figaro'
 gem 'travis'
 gem 'newrelic_rpm'
 
+gem 'simple_form'
+gem 'draper'
+
 # Uploading
 gem 'carrierwave'
 gem 'carrierwave_direct'
