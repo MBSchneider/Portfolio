@@ -1,13 +1,18 @@
 <div id="<%= dom_id(post) %>">
   <% if policy(post).show? %>
-    <p>
-      <strong><%= post.title %>
-      <% unless post.published? %>
-        <span style="color:red">
-          - Unpublished
-        </span>
-      <% end %></strong>
-    </p>
+    <h1>
+      <%= link_to post do %>
+        <%= post.title %>
+        <% unless post.published? %>
+          <span style="color:red"> - Unpublished</span>
+        <% end %>
+      <% end %>
+    </h1>
+    <% if post.published? %>
+      <%= button_to 'Un-Publish', post_path(post, post: { published: false }), method: :put, class: "btn btn-small btn-danger" %>
+    <% else %>
+      <%= button_to 'Publish', post_path(post, post: { published: true }), method: :put, class: "btn btn-small btn-success" %>
+    <% end %>
     <p><%= raw(post.content) %></p>
   <% end %>
 
@@ -24,4 +29,5 @@
       <% end %>
     </tr>
   </table>
+  <HR WIDTH="60%" ALIGN="LEFT">
 </div>
