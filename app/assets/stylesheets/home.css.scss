@@ -1,3 +1,24 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.datetimeformat {
+  color: rgb(153, 153, 153);
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-style: italic;
+  /*height: 42px;*/
+  line-height: 14px;
+/*  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;*/
+  margin-bottom: 20px;
+/*  margin-left: 0px;
+  margin-right: 0px;*/
+  margin-top: -10px;
+/*  padding-top: 10px;*/
+  /*text-align: left;*/
+  text-align: justify;
+  /*width: 41px;*/
+}

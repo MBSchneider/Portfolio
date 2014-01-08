@@ -4,8 +4,10 @@
 
     <table class="table">
       <tr>
+        <th>Priority</th>
         <th></th>
         <th>Title</th>
+        <th>Short Description</th>
         <th>Technologies Used</th>
         <th></th>
         <th></th>
@@ -14,12 +16,9 @@
 
       <%= render @projects%>
     </table>
-
-    <br />
-    <%= direct_upload_form_for @uploader do |f| %>
-      <%= f.file_field :image %>
-      <%= f.submit %>
+    <% if current_user && current_user.editor? %>
+      <%= button_to 'New Project', new_project_path, :method => "get", class: "btn btn-success" %>
     <% end %>
-
   </div>
+
 </div>

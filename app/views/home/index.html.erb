@@ -109,64 +109,51 @@
 
 	<hr class="transparent"/>
 
-	<h2 class="underline">Selected Projects <small>- <a href="#">View All Projects >></a></small></h2>
+	<h2 class="underline">Selected Projects <small>- <a href="<%= projects_path %>">View All Projects >></a></small></h2>
 	<div class="row-fluid works">
 		<ul class="thumbnails">
-			<li class="span4 item">
-				<div class="thumbnail">
-					<a href="http://www.toppotty.com" target="_blank" class="image">
-						<%= image_tag "toppotty.png" %>
-						<span class="frame-overlay"></span>
-					</a>
-					<h4 class="title">toppotty</h4>
-					<p class="description">Find and rate local restrooms. </p>
-				</div>
-			</li>
-			<li class="span4 item">
-				<div class="thumbnail">
-					<a href="http://github.com/MBSchneider" target="_blank" class="image">
-						<%= image_tag "GitHub.png" %>
-						<span class="frame-overlay"></span>
-					</a>
-					<h4 class="title">GitHub</h4>
-					<p class="description">View my GitHub repositories. </p>
-				</div>
-			</li>
-			<li class="span4 item hide">
-				<div class="thumbnail">
-					<a href="./portfolio-single.html" class="image">
-						<%= image_tag "latest4.jpg" %>
-						<span class="frame-overlay"></span>
-					</a>
-					<h4 class="title">Portfolio Item #4</h4>
-					<p class="description">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				</div>
-			</li>
+      <% @projects = Project.all.reverse[0..2] %>
+      <% @projects.each do |proj| %>
+        <li class="span4 item">
+          <div class="thumbnail">
+            <a href="<%= proj.web_page %>" target="_blank" class="image">
+              <%= image_tag proj.image_url(:proj) %>
+              <span class="frame-overlay"></span>
+            </a>
+            <h4 class="title"><%= proj.title %></h4>
+            <p class="description"><%= proj.short_description %></p>
+          </div>
+        </li>
+      <% end %>
 		</ul>
 	</div>
 
 	<hr class="transparent"/>
+  <% @posts = Post.where(:published => true).reverse[0..3] %>
+  <% @posts.each {|a| puts a.title} %>
 
-	<h2 class="underline hide">Latest Blog Posts <small>- <a href="#">View All Posts >></a></small></h2>
-	<div class="row-fluid works hide">
+	<h2 class="underline">Latest Blog Posts <small>- <a href="<%= posts_path %>">View All Posts >></a></small></h2>
+	<div class="row-fluid works">
 		<ul class="thumbnails">
+      <% @posts.each do |p| %>
 			<li class="span3 item">
 				<div class="thumbnail">
-					<a href="./portfolio-single.html" class="image">
-						<%= image_tag "latest1.jpg" %>
-						<span class="frame-overlay"></span>
+					<a href="<%= post_path(p) %>" class="image">
+            <%= image_tag p.image_url(:blog) %>
+						<p class="frame-overlay"></p>
 					</a>
 					<div class="meta">
-						<div class="block"><i class="icon-cog"></i></div>
-						<p>Mar 23, 2013</p>
+						<div class="block"><i class="icon-book"></i></div>
 					</div>
-					<div class="info">
-						<h4 class="title lp">Portfolio Item #1</h4>
-						<p class="description lp">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+					<div class="info" style="display:block">
+						<h4 class="title lp"><%= p.title %></h4>
+            <span class="datetimeformat" style="margin-bottom:0"><%= p.updated_at.to_s(:proj_time) %></span>
 					</div>
+          <br /><br /><br /><div class="description lp"><%= p.short_description %> </div>
 				</div>
 			</li>
-			<li class="span3 item">
+      <% end %>
+			<li class="span3 item hide">
 				<div class="thumbnail">
 					<a href="./portfolio-single.html" class="image">
 						<%= image_tag "latest2.jpg" %>
@@ -182,7 +169,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="span3 item">
+			<li class="span3 item hide">
 				<div class="thumbnail">
 					<a href="./portfolio-single.html" class="image">
 						<%= image_tag "latest3.jpg" %>
@@ -198,7 +185,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="span3 item">
+			<li class="span3 item hide">
 				<div class="thumbnail">
 					<a href="./portfolio-single.html" class="image">
 						<%= image_tag "latest4.jpg" %>

@@ -1,25 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
+<h2>
   <%= @project.title %>
-</br>
-<b>Technologies used:</b>
-<%= @project.technologies_used %>
-<br />
-<b>Created:</b>
-<%= @project.created_at.to_s(:proj_time)  %>
+</h2>
+<p>
+  <%= image_tag @project.image_url(:proj) %>
 </p>
-<%= @project.decorate_image %>
-<br />
-
-
-
+<p>
+  <b>Technologies used:</b>
+  <%= @project.technologies_used %>
+</p>
+<p>
+  <%= @project.short_description %>
+</p>
 <br />
 <br />
 <%= render 'comments/index' %>
 
 <%= link_to 'Edit', edit_project_path(@project) %>
 <%= link_to 'Back', projects_path %>
+
 
 

@@ -2,9 +2,8 @@ class ProjectsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @projects = Project.all
-    @uploader = Project.new.image
-    @uploader.success_action_redirect = new_project_url
+    @projects = Project.order(:priority)#.all
+    # @uploader = Project.new.image
   end
 
   def new
@@ -15,6 +14,18 @@ class ProjectsController < ApplicationController
     @project = Project.new(params[:project])
     respond_to do |format|
       if @project.save
+        Project.order(:priority)[@project.priority-1..-1].each do |pr|
+          unless pr == @project || pr.priority == nil
+            pr.priority += 1
+            pr.save
+          end
+
+          puts pr.title
+          puts pr.priority
+        end
+
+        # where(priority: @project.priority).each do |p|
+
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render json: @project, status: :created, location: @project }
       else
@@ -36,7 +47,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new(key: params[:key])
+    @project = Project.new
   end
 
   def edit
@@ -56,7 +67,7 @@ class ProjectsController < ApplicationController
     puts "Dest"
     @project = Project.find(params[:id])
     @project.destroy
-    redirect_to projects_url
+    redirect_to projects_path
   end
 
 

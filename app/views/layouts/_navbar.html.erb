@@ -2,12 +2,12 @@
 <div class="navbar navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#"> <span class="logo-text">matt schneider</span> <small>ruby on rails developer</small></a>
+      <a class="brand" href="<%= home_path %>"> <span class="logo-text">matt schneider</span> <small>ruby on rails developer</small></a>
       <span class="langaddr">
         <address class="pull-left">
 
           <i class="icon-envelope"></i> <a href="mailto:schneider.matthew.b@gmail.com">schneider.matthew.b@gmail.com</a>
-          <i class="icon-phone"></i> (206) 276-7942
+          <span class="hide"><i class="icon-phone"></i> (206) 276-7942</span>
         </address>
         <div class="pull-right">
   <% #HIDDEN %>
@@ -29,7 +29,7 @@
     <div class="container navi">
       <ul class="nav">
           <li><a>Under construction!</a></li>
-        <li class="active activation" id="homelink"><%= link_to "Home", "home" %></li>
+        <li class="activation hide" id="homelink"><%= link_to "Home", home_path %></li>
 <% #HIDDEN %>
         <li class="dropdown hide">
           <a data-toggle="dropdown" class="dropdown-toggle" href="./about.html">
@@ -57,7 +57,7 @@
 
         <li class="activation" id="projectlink"><%= link_to "Projects", projects_path %></li>
         <li class="activation" id="bloglink"><%= link_to "Blog", posts_path %></li>
-        <li class="activation" id="contactlink"><%= link_to "Contact", "contact" %></li>
+        <li class="activation" id="contactlink"><%= link_to "Contact", 'contact' %></li>
       </ul>
 
 

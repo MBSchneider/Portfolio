@@ -4,6 +4,11 @@
 
 
 $(document).ready ->
+  # $(".activation").click ->
+  #   $(".activation").removeClass "active"
+  #   $(@).addClass "active"
+
+
   navpath = window.location.pathname.split("/")[1]
   $(".activation").removeClass "active"
   switch navpath

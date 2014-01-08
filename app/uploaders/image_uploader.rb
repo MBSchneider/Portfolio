@@ -1,19 +1,19 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWaveDirect::Uploader
   include CarrierWave::RMagick
-
-  # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
-  include Sprockets::Helpers::RailsHelper
-  include Sprockets::Helpers::IsolatedHelper
-
-  include CarrierWave::MimeTypes
-  process :set_content_type
 
   storage :fog
 
-  version :thumb do
-    process resize_to_fill: [200, 200]
+  # def store_dir
+  #   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  # end
+
+  version :proj do
+    process :resize_to_fill => [370, 233]
+  end
+
+  version :blog do
+    process :resize_to_fill => [270, 170]
   end
 end

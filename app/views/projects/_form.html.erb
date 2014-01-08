@@ -1,9 +1,11 @@
 <%= simple_form_for(@project) do |f| %>
   <%= f.error_notification %>
   <%= f.input :title %>
+  <%= f.input :short_description %>
   <%= f.input :technologies_used %>
-  <%= f.hidden_field :key %>
+  <% puts "Totals: " + Project.all.size.to_s %>
+  <%= f.input :priority, input_html: { max: Project.all.length+1, min: 1, value: 1}%>
+  <%= f.input :web_page, as: :url %>
+  <%= f.input :image, as: :file %>
   <%= f.button :submit %>
 <% end %>
-
-<%= @project.image_name %>

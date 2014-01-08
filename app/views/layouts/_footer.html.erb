@@ -15,28 +15,23 @@
     </div>
     <div class="span3">
         <h3 class="widget-title">Latest Posts</h3>
+        <% @footer_posts = Post.all.reverse %>
+        <% puts @footer_posts %>
         <div class="widget-inner lates-blog-post">
+            <% @posts = Post.all.reverse[0..2] %>
+            <% @posts.each do |p| %>
+            <% puts "puts st: " + p.to_s %>
             <div class="media">
                 <i class="icon-pencil media-object"></i>
                 <div class="media-body">
-                    <a href="#">Aliquam nunc erat, suscipit molestie interdum eget, molestie vel eros</a>
-                    <div class="date">2 days ago</div>
+                    <a href="<%= post_path(p) %>">
+                        <%= p.title %>
+                        <% puts "puts desc: " + p.title if p.title %>
+                    </a>
+                    <div class="date"><%= distance_of_time_in_words(p.updated_at, Time.now) %> ago</div>
                 </div>
             </div>
-            <div class="media">
-                <i class="icon-pencil media-object"></i>
-                <div class="media-body">
-                    <a href="#">Aenean a sapien in magna luctus aliquet in eu purus. Sed venenatis luctus varius</a>
-                    <div class="date">5 days ago</div>
-                </div>
-            </div>
-            <div class="media">
-                <i class="icon-pencil media-object"></i>
-                <div class="media-body">
-                    <a href="#">Sed a rhoncus mi. Morbi eu elit sapien, eu adipiscing nisl. Duis in turpis et mi molestie bibendum eget eget mauris</a>
-                    <div class="date">1 months ago</div>
-                </div>
-            </div>
+            <% end %>
         </div>
     </div>
     <div class="span3">

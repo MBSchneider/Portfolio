@@ -23,11 +23,19 @@ gem 'newrelic_rpm'
 gem 'simple_form'
 gem 'draper'
 
+gem "nokogiri"
+gem "htmlentities"
+gem "truncate_html"
+
+gem 'redcarpet'
+gem 'albino'
+
 # Uploading
 gem 'carrierwave'
 gem 'carrierwave_direct'
 gem 'rmagick'
 gem 'fog'
+gem 'unf'
 gem 'sidekiq'
 gem 'jquery-fileupload-rails'
 

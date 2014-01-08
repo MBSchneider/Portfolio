@@ -13,7 +13,14 @@
     <% else %>
       <%= button_to 'Publish', post_path(post, post: { published: true }), method: :put, class: "btn btn-small btn-success" %>
     <% end %>
-    <p><%= raw(post.content) %></p>
+    <% if request.original_url.split('/').last == 'posts' %>
+      <%= truncate_html(post.content, length: 1500) %>
+      <%= link_to post do %>
+        (continued)
+      <% end %>
+    <% else %>
+      <p><%= raw(post.content) %></p>
+    <% end %>
   <% end %>
 
   <table>

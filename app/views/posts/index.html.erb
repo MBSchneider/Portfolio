@@ -3,7 +3,7 @@
   <div class="span12">
     <h1>Recent Blog Posts</h1>
     <HR WIDTH="60%" style="color: rgb(100, 132, 37); background-color: rgb(100, 132, 37);" ALIGN="LEFT">
-
+      <% trunc = true %>
       <%= render @posts %>
 
     <% if current_user && (current_user.editor? || current_user.author?) %>
