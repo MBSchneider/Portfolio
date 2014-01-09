@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(:version => 20140107201837) do
 
   create_table "projects", :force => true do |t|
     t.string   "title"
+    t.string   "technologies_used"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.string   "technologies_used"
     t.string   "image"
     t.boolean  "image_processed"
     t.string   "short_description"
