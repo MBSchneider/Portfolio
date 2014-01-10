@@ -48,15 +48,23 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @max_priority = Project.all.length + 1
   end
 
   def edit
     @project = Project.find(params[:id])
+    @max_priority = Project.all.length
   end
 
   def update
     @project = Project.find(params[:id])
     if @project.update_attributes(params[:project])
+      Project.order(:priority)[@project.priority-1..-1].each do |pr|
+        unless pr == @project || pr.priority == nil
+          pr.priority += 1
+          pr.save
+        end
+      end
       redirect_to @project, notice: 'Project was successfully updated.'
     else
       render action: 'edit'

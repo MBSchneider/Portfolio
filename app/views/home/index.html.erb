@@ -112,7 +112,7 @@
 	<h2 class="underline">Selected Projects <small>- <a href="<%= projects_path %>">View All Projects >></a></small></h2>
 	<div class="row-fluid works">
 		<ul class="thumbnails">
-      <% @projects = Project.all.reverse[0..2] %>
+      <% @projects = Project.order(:priority)[0..2] %>
       <% @projects.each do |proj| %>
         <li class="span4 item">
           <div class="thumbnail">
