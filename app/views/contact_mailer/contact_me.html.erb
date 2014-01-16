@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><strong>Name:</strong></td>
+        <td> <%= @message.name %></td>
+      </tr>
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td><%= @message.email %></td>
+      </tr>
+      <tr>
+        <td colspan="2"><br /><%= @message.content %></td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+

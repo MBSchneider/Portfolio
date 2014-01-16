@@ -1,7 +1,21 @@
 Portfolio::Application.configure do
 
-  # Devise
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+  :address              => "smtp.zoho.com",
+  :port                 => 465,
+  :user_name            => ENV["USER_NAME"],
+  :domain               => 'matt-schneider.com',
+  :password             => ENV["PASSWORD"],
+  :authentication       => :login,
+  :ssl                  => true,
+  :tls                  => true,
+  :enable_starttls_auto => true  }
+  config.action_mailer.default_url_options = { host:  'localhost:3000' }
 
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -16,9 +30,6 @@ Portfolio::Application.configure do
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
-
-  # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

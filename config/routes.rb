@@ -1,10 +1,13 @@
 Portfolio::Application.routes.draw do
 
+  resources :contacts
+
+
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   # get "home/index"
   match 'home', to: 'home#index'
-  match 'contact', to: 'home#contact'
+  match 'contact', to: 'contact#index'
 
   resources :posts do
     resources :comments

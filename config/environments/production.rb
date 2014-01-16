@@ -1,5 +1,21 @@
 Portfolio::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+  :address              => "smtp.zoho.com",
+  :port                 => 465,
+  :user_name            => ENV["USER_NAME"],
+  :domain               => 'matt-schneider.com',
+  :password             => ENV["PASSWORD"],
+  :authentication       => :login,
+  :ssl                  => true,
+  :tls                  => true,
+  :enable_starttls_auto => true  }
+  config.action_mailer.default_url_options = { host:  'http://mschneider-help-desk.herokuapp.com/' }
+
+
 
   # Code is not reloaded between requests
   config.cache_classes = true
