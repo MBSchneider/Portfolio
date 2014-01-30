@@ -1,6 +1,6 @@
 class Contact < ActiveRecord::Base
   attr_accessible :name, :email, :content
-  validates :name, :email, :content, :presence => true
+  validates :name, :content, :presence => true
 
   # def initialize(attributes = {})
   #   attributes.each do |name, value|

@@ -5,6 +5,10 @@ class ContactsController < ApplicationController
     @message = Contact.new
   end
 
+  def new
+    @message = Contact.new
+  end
+
   # POST /contacts
   # POST /contacts.json
   def create
@@ -12,7 +16,6 @@ class ContactsController < ApplicationController
 
     if @message.valid?
       ContactMailer.contact_me(@message).deliver
-      binding.pry
       redirect_to(root_path, :notice => "Message was successfully sent.")
     else
       flash.now.alert = "Please fill all fields."
