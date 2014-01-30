@@ -4,15 +4,21 @@
   <%= @project.title %>
 </h2>
 <p>
+  <%= link_to @project.web_page, style: "font-size:1.5em" do %>
+    <%= @project.web_page %>
+  <% end %>
+</p>
+<p>
   <%= image_tag @project.image_url(:proj) %>
+</p>
+<p>
+  <%= @project.short_description %>
 </p>
 <p>
   <b>Technologies used:</b>
   <%= @project.technologies_used %>
 </p>
-<p>
-  <%= @project.short_description %>
-</p>
+
 <br />
 <br />
 <%= render 'comments/index' %>

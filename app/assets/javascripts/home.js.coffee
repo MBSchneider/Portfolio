@@ -12,7 +12,7 @@ $(document).ready ->
   navpath = window.location.pathname.split("/")[1]
   $(".activation").removeClass "active"
   switch navpath
-    when "contact"
+    when "contacts"
       console.log "IN SWITCH CONTACT"
       $("#contactlink").addClass "active"
     when "projects"

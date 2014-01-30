@@ -4,7 +4,9 @@
   <td><%= project.title %></td>
   <td><%= project.short_description %></td>
   <td><%= project.technologies_used %></td>
-  <td><%= link_to 'Show', project %></td>
-  <td><%= link_to 'Edit', edit_project_path(project) %></td>
-  <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+  <% if policy(project).update? %>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
 </tr>

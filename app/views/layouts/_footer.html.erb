@@ -2,7 +2,7 @@
 
 <div class="row">
 <hr class="transparent"/>
-    <div class="span3">
+    <div class="span4">
         <h3 class="widget-title">About Me</h3>
         <div class="widget-inner">
             <p>
@@ -13,7 +13,7 @@
             </p>
 </div>
     </div>
-    <div class="span3">
+    <div class="span4">
         <h3 class="widget-title">Latest Posts</h3>
         <% @footer_posts = Post.all.reverse %>
         <% puts @footer_posts %>
@@ -34,13 +34,13 @@
             <% end %>
         </div>
     </div>
-    <div class="span3">
+    <div class="span3 hide">
         <h3 class="widget-title">Latest Tweets</h3>
         <!-- start: Twitter Widget -->
         <div id="twitter-foot"></div>
         <!-- end: Twitter Widget -->
     </div>
-    <div class="span3">
+    <div class="span4">
         <h3 class="widget-title">Contact Info</h3>
         <div class="widget-inner">
             <address>
@@ -72,12 +72,11 @@
     </div>
     <div class="span8 hidden-phone">
         <ul class="pull-right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="<%= home_path %>">Home</a></li>
+            <li><a href="<%= projects_path %>">Projects</a></li>
+            <li><a href="<%= posts_path %>">Blog</a></li>
+            <li class="hide"><a href="#">About Me</a></li>
+            <li><a href="<%= contacts_path %>">Contact Me</a></li>
         </ul>
     </div>
 </div>

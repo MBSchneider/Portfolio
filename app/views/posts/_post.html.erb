@@ -1,22 +1,26 @@
 <div id="<%= dom_id(post) %>">
   <% if policy(post).show? %>
-    <h1>
-      <%= link_to post do %>
-        <%= post.title %>
-        <% unless post.published? %>
-          <span style="color:red"> - Unpublished</span>
-        <% end %>
+
+    <%= link_to post, style: "font-size: 2em" do %>
+      <%= post.title %>
+      <% unless post.published? %>
+        <span style="color:red"> - Unpublished</span>
       <% end %>
-    </h1>
-    <% if post.published? %>
-      <%= button_to 'Un-Publish', post_path(post, post: { published: false }), method: :put, class: "btn btn-small btn-danger" %>
-    <% else %>
-      <%= button_to 'Publish', post_path(post, post: { published: true }), method: :put, class: "btn btn-small btn-success" %>
     <% end %>
+    <% if policy(post).update? %>
+      <% if post.published? %>
+        <%= button_to 'Un-Publish', post_path(post, post: { published: false }), method: :put, class: "btn btn-small btn-danger" %>
+      <% else %>
+        <%= button_to 'Publish', post_path(post, post: { published: true }), method: :put, class: "btn btn-small btn-success" %>
+      <% end %>
+    <% end %>
+    <br /><br />
+
     <% if request.original_url.split('/').last == 'posts' %>
       <%= truncate_html(post.content, length: 1500) %>
+      <br /><br />
       <%= link_to post do %>
-        (continued)
+        (view full)
       <% end %>
     <% else %>
       <p><%= raw(post.content) %></p>
@@ -25,9 +29,6 @@
 
   <table>
     <tr>
-      <% if policy(post).show? %>
-        <td><%= button_to 'Show', post, :method => "get", class: "btn" %></td>
-      <% end %>
       <% if policy(post).update? %>
         <td><%= button_to 'Edit', edit_post_path(post), :method => "get", class: "btn btn-primary" %></td>
       <% end %>

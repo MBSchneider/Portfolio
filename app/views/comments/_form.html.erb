@@ -1,8 +1,8 @@
 
 <%= simple_form_for [@commentable, @comment] do |f| %>
   <%= f.error_notification %>
-  <%= f.input :body, label: "Comment" %>
-  <%= f.input :author_email, label: "Email" %>
+  <%= f.input :body, label: "Comment", input_html: { class: 'text-input span6 placeholder', rows: 6 }  %>
+  <%= f.input :author_email, label: "Email", input_html: { class: 'text-input span6 placeholder' } %>
   <%= f.button :submit %>
 
 <% end %>

@@ -13,39 +13,37 @@
           <!-- start: Slider -->
           <section id="slider">
 
-              <div id="sequence-theme">
-                  <div id="sequence">
-                      <span class="prev"><i class="icon-angle-left"></i></span>
-                      <span class="next"><i class="icon-angle-right"></i></span>
-                      <ul>
-                          <li>
-                              <h2 class="title"><span>Las Vegas</span></h2>
-                              <h3 class="subtitle"><span>Overlooking the strip</span></h3>
-                              <img class="img-bg" src="<%= image_path("slider1.jpg") %>" />
-                          </li>
-                          <li>
-                              <h2 class="title"><span>Hawaii</span></h2>
-                              <h3 class="subtitle"><span>Southernmost point in the US (Ka Lae)</span></h3>
-                              <img class="img-bg" src="<%= image_path("slider6.jpg") %>" alt="" />
-                          </li>
-                          <li>
-                              <h2 class="title"><span>Green Lake</span></h2>
-                              <h3 class="subtitle"><span>Enjoying some rare sunshine</span></h3>
-                              <img class="img-bg" src="<%= image_path("slider3.jpg") %>" alt="" />
-                          </li>
-                          <li>
-                              <h2 class="title"><span>At the parents</span></h2>
-                              <h3 class="subtitle"><span>With man's best friend</span></h3>
-                              <img class="img-bg" src="<%= image_path("slider4.jpg") %>" alt="" />
-                          </li>
-                          <li>
-                              <h2 class="title"><span>Getting away</span></h2>
-                              <h3 class="subtitle"><span>Lake Cavinaugh, WA</span></h3>
-                              <img class="img-bg" src="<%= image_path("slider5.jpg") %>" alt="" />
-                          </li>
-                      </ul>
-                  </div>
+            <div id="sequence-theme">
+              <div id="sequence">
+                <span class="prev"><i class="icon-angle-left"></i></span>
+                <span class="next"><i class="icon-angle-right"></i></span>
+                <ul>
+                  <li>
+                    <h2 class="title" style="text-align: right; right: 25%"><span>Matt Schneider</span></h2>
+                    <h3 class="subtitle" style="text-align: right; right: 25%"><span>Ruby on Rails Developer</span></h3>
+                    <img class="img-bg" src="<%= image_path("slider1.jpg") %>" alt="" />
+                  </li>
+                  <li>
+                    <h2 class="title" style="bottom:-25%"><span>Testimonial</span></h2>
+                    <h3 class="subtitle"><span>
+                      Matt is a hard worker and a passionate <br />
+                      web developer.  Also, he rubs my belly.<br />
+                      - Hershey
+                    </span></h3>
+                    <img class="img-bg" src="<%= image_path("slider4.jpg") %>" alt="" />
+                  </li>
+                  <li>
+                    <h2 class="title"><span>Matt Schneider</span></h2>
+                    <h3 class="subtitle"><span>Ruby on Rails Developer</span></h3>
+                    <img class="img-bg" src="<%= image_path("slider3.jpg") %>" />
+                  </li>
+                  <li>
+                    <h2 class="title"><span>Projects</span></h2>
+                    <img class="img-bg" src="<%= image_path("projects-2.jpg") %>" />
+                  </li>
+                </ul>
               </div>
+            </div>
 
           </section>
           <!-- end: Slider -->
@@ -55,16 +53,13 @@
           <div class="hero-unit span12">
               <div class="row-fluid">
                   <div class="span9">
-                      <h3>Suspendisse nunc lorem, venenatis non tincidunt nec</h3>
-                      <p>Maecenas varius, leo in venenatis rhoncus, orci tortor sollicitudin erat,
-                          in varius ipsum mi vitae metus. Curabitur luctus, sapien quis rhoncus aliquam;
-                          odio nunc auctor augue, a mollis erat ante vitae tortor. In sapien nulla,
-                          cursus placerat varius eget! </p>
+                      <h3>Ruby on Rails Web Developer</h3>
+                      <p> I am a Ruby on Rails developer with a business background. I am <span style="color: #5bb75b; font-weight:600">passionate about coding</span>, and using software to <span style="color: #5bb75b; font-weight:600">create value</span> and to <span style="color: #5bb75b; font-weight:600">solve real-world problems</span>. I am proficient in Ruby on Rails, Javascript / jQuery, HTML, and CSS. </p>
                   </div>
                   <div class="span3">
                       <div class="button-block">
                           <div class="pull-vertical-center">
-                              <a href="#" class="btn btn-primary btn-large">Read More</a>
+                              <a href="<%= contacts_path %>" class="btn btn-primary btn-large">Contact Me</a>
                           </div>
                       </div>
                   </div>
