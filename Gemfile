@@ -46,13 +46,7 @@ gem 'rails', '3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
-  gem 'pg'
-end
-
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 gem 'rails_12factor', group: :production
 

@@ -1,17 +1,20 @@
-language:
-  ruby
-
+language: ruby
 rvm:
-  - "2.0.0"
-
+- 2.0.0
 env:
-  - DB=sqlite DEVISE_SECRET_KEY=1111122222333334444455555abcdefgjklopqt
-
+  global:
+  - secure: nPTcVYOXGja/r6Z7fig7DoUxyNPpdWO8oxvzmRNuTKHAd6exJ2jC/ePQEFaQZzv+EryvfGEyKCfZdapZUUikqgqRDQZ3DDqA5aAGQiey7/ic6GTzItIjMn6Mi+LQ0HQLYoDkWzFgvGPVd9PbDfwEigTtHGbQJTkVeDhir0Eip5o=
+  - secure: LT8X/9gvrUYZwpNXMAF6CBDDXe8Fd6jthRxKnEnzgN76D58d27bqrON1OGmVrtc4Id4mB3t7EMjaPeD2Z1AhWnOMYQ2RXqagHW+OrkheuOSWCKvX7kHWS7hMRspv4VVoQIAG7lbxf142chN2EP1QQuZzjiJbGWrKwdsqpO3U+O8=
+  - secure: prjajrxUzwHz4plRRIbyy22c2QG83VxAaYKRuD5MfPI7CITlFl75WOdXNCAXjkqH73ASZGvZc6BrS64KrhrK8QS8Gp8Cg8TZZ4CX1XcILm6N8qyWNF5Q82TIEaoITMBKuq/cISzXcDnhFHiGL05jO+LzhoN3mA5gqm5TS1bj51I=
+  - secure: ITgob94kNtzFwNoL6isGDL0iAiFauNwPCiM4eFcJ6Pmll9UnT7N9SuMuh/1G6pcs6wfHsFq3G5GB7X9QkyTjkehDCWkJg8AkQ2XhXM0zlKlYu8NRpVeuv3L2DWVCzGtxwZ5rjLavj3JWv8URUeSfWf2GU4HEHdAbdyo1Fcj3CuA=
+  - secure: G5mV5m2Y5CEkWaaHEZk3QWReAU3/ykEF+1SwP7fj4K5w4w9nscWuvmzEi3ILqDKArl7TRPLq5brFF9N3RmFJSn2Sx/6E1M3C3ho98hStnjasoNJlxGJbM4truP/XHVc6palJayCj77VMkwwCy7FJaYFJQIgp+LNlIPi6fDJZCiQ=
+  - secure: ZF7q/b9H2ZwIsh+Ybu9OmsakEZX5+DRLOyw+LQjHKL1yhmTd9YGo6zBjEGUqDPMKYxBSPSjrFu+Q+iHVew1sXyt0FuITi7ST4Aoyq9FEkkqebt96SvMJTZIaS3EJNwPI6j/dk91rhmBcO5cQHg2j9kMVjxaDMRi1VwRl473ZpTM=
+  - secure: V9uZAUzPa64WtLoEYmVOoMDQYZKuAqmVuExQTRbaimWQ93fQnp/lc/8YONW0SOMNtdFFnMKy1Sdyt+lJ5AUJkGKsdqaZcf24OpByVnoAZ6P9vncQQi0qyrGuFqzweoWQ08UKoBPBtb6PMPBh8T5mpMn8wc1ad9FimhA1UNV8u5U=
+  - secure: krjz53NoFDA9Ezb8vrzxeSYC0Y4J7HN+yLnKL4IS8xDUN0tRhVAK2pxir6dAVVu89ZNeQ7aMc+N2YQ1nb+kekPaX5DoU+5sqkcBv4+Ajsk2rOhF8kdxDayXsaS5Twh5Y40zrCIFA3jsAAuyWjmfa2eIIZ/9AmHTZ2Elk2GSrPiA=
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rake routes
-  - bundle exec rake
-  - rails -v
-
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rake routes
+- bundle exec rake
+- rails -v
 bundler_args: --binstubs=./bundler_stubs
