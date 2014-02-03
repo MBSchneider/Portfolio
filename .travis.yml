@@ -11,6 +11,10 @@ env:
   - secure: ZF7q/b9H2ZwIsh+Ybu9OmsakEZX5+DRLOyw+LQjHKL1yhmTd9YGo6zBjEGUqDPMKYxBSPSjrFu+Q+iHVew1sXyt0FuITi7ST4Aoyq9FEkkqebt96SvMJTZIaS3EJNwPI6j/dk91rhmBcO5cQHg2j9kMVjxaDMRi1VwRl473ZpTM=
   - secure: V9uZAUzPa64WtLoEYmVOoMDQYZKuAqmVuExQTRbaimWQ93fQnp/lc/8YONW0SOMNtdFFnMKy1Sdyt+lJ5AUJkGKsdqaZcf24OpByVnoAZ6P9vncQQi0qyrGuFqzweoWQ08UKoBPBtb6PMPBh8T5mpMn8wc1ad9FimhA1UNV8u5U=
   - secure: krjz53NoFDA9Ezb8vrzxeSYC0Y4J7HN+yLnKL4IS8xDUN0tRhVAK2pxir6dAVVu89ZNeQ7aMc+N2YQ1nb+kekPaX5DoU+5sqkcBv4+Ajsk2rOhF8kdxDayXsaS5Twh5Y40zrCIFA3jsAAuyWjmfa2eIIZ/9AmHTZ2Elk2GSrPiA=
+
+before_script:
+  - psql -c 'create database myapp_test;' -U postgres
+
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare

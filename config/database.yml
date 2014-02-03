@@ -15,9 +15,15 @@
 development:
   adapter: postgresql
   encoding: unicode
+  database: myapp_development
   pool: 5
+  username: mattschneider
+  password:
 
 test:
   adapter: postgresql
   encoding: unicode
+  database: myapp_test
   pool: 5
+  username: postgres
+  password:
