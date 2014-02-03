@@ -25,5 +25,5 @@ test:
   encoding: unicode
   database: myapp_test
   pool: 5
-  username: mattschneider
+  username: postgres
   password:
