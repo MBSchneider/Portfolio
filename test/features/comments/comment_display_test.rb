@@ -6,7 +6,8 @@ feature "Editor - visit post item as editor to see comments" do
 
     # Given completed comments on a post form
     visit posts_path
-    page.find("#post_1002452156").click_button "Show"
+
+    page.find("#post_1002452156").click_link posts(:way).title
 
     # Then post should be shown
     page.text.must_include comments(:comment1).body
@@ -22,7 +23,7 @@ feature "standard user - visits post item to see comments" do
 
     # Given completed comments on a post form
     visit posts_path
-    page.find("#post_1002452156").click_button "Show"
+    page.find("#post_1002452156").click_link posts(:way).title
 
     # Then post should be shown
     page.text.must_include comments(:comment1).body
@@ -37,9 +38,11 @@ feature "Editor - visit project as editor to see comments" do
     editor_sign_in
 
     # Given completed comments on a project form
-    visit projects_path
+    visit project_path(projects(:bp))
 
-    page.find("#102197991").click_link "Show"
+    # page.find("#102197991").find("img").click
+
+
 
     # Then post should be shown
     page.text.must_include comments(:comment4).body
@@ -55,7 +58,7 @@ feature "standard user - visits project item to see comments" do
     # Given completed comments on a project form
     visit projects_path
 
-    page.find("#102197991").click_link "Show"
+    visit project_path(projects(:bp))
 
     # Then post should be shown
     page.text.must_include comments(:comment4).body

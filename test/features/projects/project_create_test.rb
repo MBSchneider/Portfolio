@@ -1,54 +1,59 @@
 require "test_helper"
 
-feature "creating a portfolio project" do
+feature "creating a portfolio project as an editor" do
   scenario "add a new project" do
+    editor_sign_in
 
-  # Given a completed project form
-  visit projects_path
-  click_on "New Project"
-  fill_in "Title", with: projects(:mdp).title
-  fill_in "Technologies used", with: projects(:mdp).technologies_used
+    # Given a completed project form
+    visit projects_path
 
-  # When I submit the form'
-  click_on 'Create Project'
+    click_on "New Project"
+    fill_in "Title", with: projects(:mdp).title
+    fill_in "Technologies used", with: projects(:mdp).technologies_used
 
-  # Then I should see the post & success message
-  page.text.must_include projects(:mdp).title
-  page.text.must_include "Project was successfully created."
+    # When I submit the form'
+    click_on 'Create Project'
+
+    # Then I should see the post & success message
+    page.text.must_include projects(:mdp).title
+    page.text.must_include "Project was successfully created."
   end
 end
 
-feature "creating project with missing information" do
+feature "shouldn't create project with missing information" do
   scenario "project not created" do
 
-  # Given an incomplete project form
-  visit projects_path
-  click_on "New Project"
+    editor_sign_in
 
-  # Nothing completed when form submitted
-  click_on 'Create Project'
+    # Given an incomplete project form
+    visit projects_path
+    click_on "New Project"
 
-  # Then project should not be created
-  page.text.wont_include 'Project succesfully created.'
-  page.text.must_include 'prohibited this project from being saved'
+    # Nothing completed when form submitted
+    click_on 'Create Project'
+
+    # Then project should not be created
+    page.text.wont_include 'Project succesfully created.'
+    page.text.must_include 'review the problems below'
+
   end
 end
 
-feature "creating project with missing information" do
-  scenario "project not created" do
+feature "non-edior should not be able to create a project" do
+  scenario "create project button not available" do
 
-  # Given a project form with title less than required length
-  visit projects_path
-  click_on "New Project"
-  fill_in "Title", with: projects(:bp).title
-  fill_in "Technologies used", with: projects(:bp).technologies_used
+    # Given a project form with title less than required length
+    visit projects_path
+    # click_on "New Project"
+    # fill_in "Title", with: projects(:bp).title
+    # fill_in "Technologies used", with: projects(:bp).technologies_used
 
-  # When I submit the form'
-  click_on 'Create Project'
+    # # When I submit the form'
+    # click_on 'Create Project'
 
-  # Then project should not be created
-  page.text.wont_include 'Project succesfully created.'
-  page.text.must_include 'prohibited this project from being saved'
+    # Then project should not be created
+    page.text.wont_include 'New Project'
+    # page.text.must_include 'prohibited this project from being saved'
   end
 end
 

@@ -2,18 +2,19 @@ source 'https://rubygems.org'
 
 group :development, :test do
   gem "minitest-rails"
+  gem "letter_opener"
 end
 
 group :test do
-  gem 'minitest-rails'
   gem 'minitest-rails-capybara'
   gem 'minitest-colorize'
   gem 'minitest-focus'
   gem 'turn'
+  gem 'simplecov', :require => false
 end
 
 gem 'pundit'
-gem 'simplecov', :require => false, :group => :test
+
 gem 'pry-rails'
 gem 'omniauth-twitter'
 gem 'figaro'

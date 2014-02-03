@@ -16,17 +16,14 @@
     <div class="span4">
         <h3 class="widget-title">Latest Posts</h3>
         <% @footer_posts = Post.all.reverse %>
-        <% puts @footer_posts %>
         <div class="widget-inner lates-blog-post">
             <% @posts = Post.all.reverse[0..2] %>
             <% @posts.each do |p| %>
-            <% puts "puts st: " + p.to_s %>
             <div class="media">
                 <i class="icon-pencil media-object"></i>
                 <div class="media-body">
                     <a href="<%= post_path(p) %>">
                         <%= p.title %>
-                        <% puts "puts desc: " + p.title if p.title %>
                     </a>
                     <div class="date"><%= distance_of_time_in_words(p.updated_at, Time.now) %> ago</div>
                 </div>

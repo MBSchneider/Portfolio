@@ -1,9 +1,3 @@
-<head>
-
-</head>
-
-<body>
-
   <div class="row">
 
       <!-- start: Page section -->
@@ -125,7 +119,6 @@
 
 	<hr class="transparent"/>
   <% @posts = Post.where(:published => true).reverse[0..3] %>
-  <% @posts.each {|a| puts a.title} %>
 
 	<h2 class="underline">Latest Blog Posts <small>- <a href="<%= posts_path %>">View All Posts >></a></small></h2>
 	<div class="row-fluid works">
@@ -324,6 +317,3 @@
   </section>
   <!-- end: Page section -->
   </div>
-
-</body>
-</html>

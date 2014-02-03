@@ -1,7 +1,7 @@
 require "test_helper"
 
 feature "Visiting Post home page" do
-  scenario "posts exits on page" do
+  scenario "posts exists on page" do
     # Given that posts were placed on page
     post = Post.create(title: posts(:bsh).title, content: posts(:bsh).content)
 

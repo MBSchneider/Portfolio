@@ -25,22 +25,19 @@ class ActionDispatch::IntegrationTest
 end
 
 def editor_sign_in
-  visit root_path
-  click_on 'Sign In'
+  visit new_user_session_path
   fill_in 'Email', with: users(:one).email
   fill_in 'Password', with: "password"
   click_on 'Sign in'
 end
 def author_sign_in
-  visit root_path
-  click_on 'Sign In'
+  visit new_user_session_path
   fill_in 'Email', with: users(:two).email
   fill_in 'Password', with: "passwordtwo"
   click_on 'Sign in'
 end
 def reg_sign_in
-  visit root_path
-  click_on 'Sign In'
+  visit new_user_session_path
   fill_in 'Email', with: users(:three).email
   fill_in 'Password', with: "passwordthree"
   click_on 'Sign in'

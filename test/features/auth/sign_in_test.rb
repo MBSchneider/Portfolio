@@ -4,10 +4,7 @@ feature "sign in" do
   #focus
   scenario "sign in user" do
 
-    visit root_path
-
-    #Given a valid user sign in
-    click_on 'Sign In'
+    visit new_user_session_path
 
     fill_in 'Email', with: users(:one).email
     fill_in 'Password', with: "password"

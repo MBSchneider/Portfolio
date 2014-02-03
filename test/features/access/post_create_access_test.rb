@@ -98,11 +98,12 @@ feature "creating a post as a normal user" do
 
     # Try to visit new post path
     visit new_post_path
+    # save_and_open_page
 
     # Should redirect to index
     page.text.wont_include "New Post"
     page.text.wont_include "Create post"
-    page.text.must_include "Recent Blog Posts"
+    page.text.must_include "You are not authorized to perform this action."
   end
 end
 

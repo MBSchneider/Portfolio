@@ -23,7 +23,10 @@
 <br />
 <%= render 'comments/index' %>
 
-<%= link_to 'Edit', edit_project_path(@project) %>
+<% if current_user && (current_user.editor?) %>
+  <%= link_to 'Edit', edit_project_path(@project) %>
+<% end %>
+
 <%= link_to 'Back', projects_path %>
 
 
