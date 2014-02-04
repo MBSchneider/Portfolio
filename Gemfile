@@ -65,6 +65,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'rubocop'
 
 gem 'launchy'
 

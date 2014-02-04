@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
-feature "Send contact me email" do
-  scenario "sends email with contact information" do
+feature 'Send contact me email' do
+  scenario 'sends email with contact information' do
     visit root_path
 
     click_link 'Contact'

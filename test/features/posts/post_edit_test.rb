@@ -1,26 +1,24 @@
-require "test_helper"
+require 'test_helper'
 
-feature "Editing a post" do
-  #focus
-  scenario "select edit on a valid post" do
-  editor_sign_in
+feature 'Editing a post' do
+  scenario 'select edit on a valid post' do
+    editor_sign_in
 
-  visit post_path(posts(:vi))
+    visit post_path(posts(:vi))
 
-  # Given a completed post form
-  click_link "Edit"
+    # Given a completed post form
+    click_link 'Edit'
 
-  fill_in 'Title', with: posts(:bsh).title
-  fill_in 'Content', with: posts(:bsh).content
+    fill_in 'Title', with: posts(:bsh).title
+    fill_in 'Content', with: posts(:bsh).content
 
-  # When I submit the form
-  click_on 'Update Post'
+    # When I submit the form
+    click_on 'Update Post'
 
-  # Then I should see the post & success message
-  page.text.must_include posts(:bsh).title
-  page.text.must_include posts(:bsh).content
-  page.text.must_include 'Post was successfully updated'
+    # Then I should see the post & success message
+    page.text.must_include posts(:bsh).title
+    page.text.must_include posts(:bsh).content
+    page.text.must_include 'Post was successfully updated'
 
   end
 end
-

@@ -1,10 +1,9 @@
-require "test_helper"
+require 'test_helper'
 
-feature "signing up" do
-  #focus
-  scenario "create User account" do
+feature 'signing up' do
+  scenario 'create User account' do
 
-    #Given a completed user registration form
+    # Given a completed user registration form
     visit new_user_session_path
 
     click_link 'Sign up'

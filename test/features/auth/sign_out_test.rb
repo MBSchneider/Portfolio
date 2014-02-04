@@ -1,8 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
-feature "sign out" do
-  #focus
-  scenario "sign out user" do
+feature 'sign out' do
+  scenario 'sign out user' do
 
     reg_sign_in
 

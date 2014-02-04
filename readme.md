@@ -2,6 +2,7 @@
 
 By [Matt Schneider](github.com/MBSchneider)
 
+![travis](https://travis-ci.org/MBSchneider/Portfolio.png)(https://travis-ci.org/MBSchneider/Portfolio)
 **Portfolio Application**
 A portfolio to show off my projects.  See it at [http://www.matt-schneider.com/](http://www.matt-schneider.com/)
 
