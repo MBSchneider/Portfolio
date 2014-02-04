@@ -1,0 +1,11 @@
+AllCops:
+  Includes:
+    - Rakefile
+    - config.ru
+  Excludes:
+    - app/helpers/**
+    - app/decorators/**
+    - db/**
+    - config/**
+    - script/**
+    - !ruby/regexp /old_and_unused\.rb$/

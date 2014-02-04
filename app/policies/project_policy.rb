@@ -1,3 +1,4 @@
+# Authorization policy for project actions based on user role
 class ProjectPolicy < ApplicationPolicy
   attr_reader :user, :project
 
@@ -8,7 +9,7 @@ class ProjectPolicy < ApplicationPolicy
 
   def create?
     if user
-      user.editor? or user.author?
+      user.editor? || user.author?
     else
       false
     end

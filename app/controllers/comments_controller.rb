@@ -1,3 +1,4 @@
+# Controls comments applied to posts and projects
 class CommentsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   before_filter :load_commentable
@@ -16,7 +17,7 @@ class CommentsController < ApplicationController
     @comment.approved = false
     if @comment.save
       current_user.comments << @comment
-      flash[:notice] = "Comment was successfully created"
+      flash[:notice] = 'Comment was successfully created'
       redirect_to [@commentable]
     else
       render :new
@@ -26,10 +27,10 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     if @comment.update_attributes(params[:comment])
-      flash[:notice] = "Comment has been approved"
+      flash[:notice] = 'Comment has been approved'
       redirect_to @commentable
     else
-      flash[:alert] = "Comment was not approved"
+      flash[:alert] = 'Comment was not approved'
       render @commentable
     end
   end
@@ -45,9 +46,9 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def load_commentable
-    resource, id = request.path.split('/')[1,2]
+    resource, id = request.path.split('/')[1, 2]
     @commentable = resource.singularize.classify.constantize.find(id)
   end
-
 end

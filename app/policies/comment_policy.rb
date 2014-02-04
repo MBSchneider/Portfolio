@@ -1,3 +1,4 @@
+# Authorization policy for comments based on user role
 class CommentPolicy < ApplicationPolicy
   attr_reader :user, :comment
 
@@ -44,12 +45,11 @@ class CommentPolicy < ApplicationPolicy
         if user.editor?
           scope.all
         else
-          scope.where("author_id = ? OR approved = ?", user.id, true)
+          scope.where('author_id = ? OR approved = ?', user.id, true)
         end
       else
-        scope.where(:approved => true)
+        scope.where(approved: true)
       end
     end
   end
-
 end

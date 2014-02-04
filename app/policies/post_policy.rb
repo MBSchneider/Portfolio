@@ -1,3 +1,4 @@
+# Authorization policy for post actions based on user role
 class PostPolicy < ApplicationPolicy
   attr_reader :user, :post
 
@@ -8,7 +9,7 @@ class PostPolicy < ApplicationPolicy
 
   def create?
     if user
-      user.editor? or user.author?
+      user.editor? || user.author?
     else
       false
     end
@@ -18,29 +19,29 @@ class PostPolicy < ApplicationPolicy
     create?
   end
 
-def update?
-  if user
-    user.editor?
-  else
-    false
+  def update?
+    if user
+      user.editor?
+    else
+      false
+    end
   end
-end
 
-def destroy?
-  if user
-    user.editor?
-  else
-    false
+  def destroy?
+    if user
+      user.editor?
+    else
+      false
+    end
   end
-end
 
-def show?
-  if user
-    user.editor?  || post.published?  || user == post.author
-  else
-    post.published?
+  def show?
+    if user
+      user.editor?  || post.published?  || user == post.author
+    else
+      post.published?
+    end
   end
-end
 
   def resolve
     scope
