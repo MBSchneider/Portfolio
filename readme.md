@@ -2,7 +2,7 @@
 
 By [Matt Schneider](github.com/MBSchneider)
 
-[![travis](https://travis-ci.org/MBSchneider/Portfolio.png)](https://travis-ci.org/MBSchneider/Portfolio)
+[![travis](https://travis-ci.org/MBSchneider/Portfolio.png)](https://travis-ci.org/MBSchneider/Portfolio)[![Code Climate](https://codeclimate.com/repos/52f158fd69568059b5002051/badges/b450bc4bbe30949fb6db/gpa.png)](https://codeclimate.com/repos/52f158fd69568059b5002051/feed)
 
 **Portfolio Application**
 A portfolio to show off my projects.  See it at [http://www.matt-schneider.com/](http://www.matt-schneider.com/)
