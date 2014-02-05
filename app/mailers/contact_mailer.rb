@@ -4,7 +4,7 @@ class ContactMailer < ActionMailer::Base
 
   def contact_me(message)
     @message = message
-    mail to: 'matts3@u.washington.edu', subject: 'matt-schneider.com Contact
-                                                  Message'
+    mail to: 'matts3@u.washington.edu',
+         subject: 'matt-schneider.com Contact Message'
   end
 end

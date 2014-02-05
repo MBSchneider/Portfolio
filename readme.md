@@ -2,7 +2,7 @@
 
 By [Matt Schneider](github.com/MBSchneider)
 
-[![travis](https://travis-ci.org/MBSchneider/Portfolio.png)](https://travis-ci.org/MBSchneider/Portfolio)[![Code Climate](https://codeclimate.com/repos/52f158fd69568059b5002051/badges/b450bc4bbe30949fb6db/gpa.png)](https://codeclimate.com/repos/52f158fd69568059b5002051/feed)
+[![travis](https://travis-ci.org/MBSchneider/Portfolio.png)](https://travis-ci.org/MBSchneider/Portfolio) [![Code Climate](https://codeclimate.com/repos/52f158fd69568059b5002051/badges/b450bc4bbe30949fb6db/gpa.png)](https://codeclimate.com/repos/52f158fd69568059b5002051/feed)
 
 **Portfolio Application**
 A portfolio to show off my projects.  See it at [http://www.matt-schneider.com/](http://www.matt-schneider.com/)
@@ -18,7 +18,7 @@ Authentication has been implemented using the Devise gem, and the Omniauth gem a
 Authorization is implemented using the pundit gem.  An admin (me) has access to create, edit, and destroy items, while a visitor would only be able to view content.
 
 ### Projects
-Shows a listing of projects I have worked on.  Each project will have an associated picture, a description, a string with technologies used, and multiple comments.  Projects can be created or updated by an admin, and can be viewed by everyone.
+Shows a listing of projects I have worked on.  Each project will have an associated picture, a description, technologies used, and comments can be added by users.  Projects can be created or updated by an admin, and can be viewed by everyone.
 
 ### Posts
 Blog posts are similar to projects, in that they can be created and updated by an admin (me), and can be viewed by everyone.  Users can add comments to blog posts as well.
