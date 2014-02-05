@@ -7,7 +7,7 @@ By [Matt Schneider](github.com/MBSchneider)
 **Portfolio Application**
 A portfolio to show off my projects.  See it at [http://www.matt-schneider.com/](http://www.matt-schneider.com/)
 
-![homepage](https://raw.github.com/MBSchneider/portfolio/master/app/assets/images/PortfolioScreenShot.png)
+![homepage](http://schnerdalert.webs.com/photos/undefined/Screen%20Shot%202014-02-04%20at%205.11.20%20PM.png)
 
 ## Functionality
 In addition to displaying my contact information, etc., my portfolio should do the following:
