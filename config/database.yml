@@ -27,3 +27,11 @@ test:
   pool: 5
   username: postgres
   password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_production
+  pool: 5
+  username: mattschneider
+  password:
