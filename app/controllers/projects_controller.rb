@@ -6,9 +6,9 @@ class ProjectsController < ApplicationController
     @projects = Project.order(:priority)
   end
 
-  def new
-    @project = Project.new(key: params[:key])
-  end
+  # def new
+  #   @project = Project.new(key: params[:key])
+  # end
 
   def create
     @project = Project.new(params[:project])
