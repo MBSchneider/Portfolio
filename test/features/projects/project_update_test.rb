@@ -5,13 +5,8 @@ feature 'editing a portfolio project as an editor' do
 
     editor_sign_in
 
-    project = Project.create(
-      title: projects(:mdp).title,
-      technologies_used: projects(:mdp).technologies_used
-      )
-
     # Given a completed project form
-    visit project_path(project)
+    visit project_path(projects(:mdp))
     click_on 'Edit'
     fill_in 'Title', with: projects(:cfb).title
     fill_in 'Technologies used', with: projects(:cfb).technologies_used
@@ -29,13 +24,8 @@ end
 feature 'try to edit a portfolio project as a normal user' do
   scenario "Doesn't show edit button" do
 
-    project_2 = Project.create(
-      title: projects(:mdp).title,
-      technologies_used: projects(:mdp).technologies_used
-      )
-
     # Given a completed project form
-    visit project_path(project_2)
+    visit project_path(projects(:mdp))
 
     # # Then I should see the post & success message
     # page.text.must_include 'error'
