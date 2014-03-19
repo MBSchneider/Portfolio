@@ -12,3 +12,8 @@ cfb:
   title: College football
   technologies_used: js, HTML, ruby, rails
   priority: 3
+
+dd:
+  title: DD
+  technologies_used: misc
+  priority: 4
