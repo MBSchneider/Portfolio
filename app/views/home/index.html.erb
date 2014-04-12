@@ -1,319 +1,144 @@
-  <div class="row">
+<div class="row">
+  <!-- start: Page section -->
+  <section id="page-sidebar" class="span12">
 
-      <!-- start: Page section -->
-      <section id="page-sidebar" class="span12">
+    <div class="row-fluid">
+      <!-- start: Slider -->
+      <section id="slider">
+        <div id="sequence-theme">
+          <div id="sequence">
+            <span class="prev"><i class="icon-angle-left"></i></span>
+            <span class="next"><i class="icon-angle-right"></i></span>
+            <ul>
+              <li>
+                <h2 class="title" style="text-align: right; right: 25%"><span>Matt Schneider</span></h2>
+                <h3 class="subtitle" style="text-align: right; right: 25%"><span>Ruby on Rails Developer</span></h3>
+                <img class="img-bg" src="<%= image_path("slider1.jpg") %>" alt="" />
+              </li>
+              <li>
+                <h2 class="title" style="bottom:-25%"><span>Testimonial</span></h2>
+                <h3 class="subtitle"><span>
+                  Matt is a hard worker and a passionate <br />
+                  web developer.  Also, he rubs my belly.<br />
+                  - Hershey
+                </span></h3>
+                <img class="img-bg" src="<%= image_path("slider4.jpg") %>" alt="" />
+              </li>
+              <li>
+                <h2 class="title" style="bottom:-25%"><span>Full stack web developer</span></h2>
+                <h3 class="subtitle"><span>
+                  Ruby on Rails<br/>
+                  JavaScript / jQuery<br/>
+                  HTML, CSS, Sass
+                </span></h3>
+                <img class="img-bg" src="<%= image_path("projects-2.jpg") %>" />
+              </li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="row-fluid">
-          <!-- start: Slider -->
-          <section id="slider">
+      </section>
+      <!-- end: Slider -->
+    </div>
 
-            <div id="sequence-theme">
-              <div id="sequence">
-                <span class="prev"><i class="icon-angle-left"></i></span>
-                <span class="next"><i class="icon-angle-right"></i></span>
-                <ul>
-                  <li>
-                    <h2 class="title" style="text-align: right; right: 25%"><span>Matt Schneider</span></h2>
-                    <h3 class="subtitle" style="text-align: right; right: 25%"><span>Ruby on Rails Developer</span></h3>
-                    <img class="img-bg" src="<%= image_path("slider1.jpg") %>" alt="" />
-                  </li>
-                  <li>
-                    <h2 class="title" style="bottom:-25%"><span>Testimonial</span></h2>
-                    <h3 class="subtitle"><span>
-                      Matt is a hard worker and a passionate <br />
-                      web developer.  Also, he rubs my belly.<br />
-                      - Hershey
-                    </span></h3>
-                    <img class="img-bg" src="<%= image_path("slider4.jpg") %>" alt="" />
-                  </li>
-                  <li>
-                    <h2 class="title" style="bottom:-25%"><span>Full stack web developer</span></h2>
-                    <h3 class="subtitle"><span>
-                      Ruby on Rails<br/>
-                      JavaScript / jQuery<br/>
-                      HTML, CSS, Sass
-                    </span></h3>
-                    <img class="img-bg" src="<%= image_path("projects-2.jpg") %>" />
-                  </li>
-                </ul>
+    <div class="row-fluid">
+      <div class="hero-unit span12">
+        <div class="row-fluid">
+          <div class="span9">
+            <h3>Ruby on Rails Web Developer</h3>
+            <p> I am a Ruby on Rails developer with a business background. I am <span class='highlight'>passionate about coding</span>, and using software to <span class='highlight'>create value</span> and to <span class='highlight'>solve real-world problems</span>. I am proficient in Ruby on Rails, Javascript / jQuery, HTML, and CSS. </p>
+          </div>
+          <div class="span3">
+            <div class="button-block">
+              <div class="pull-vertical-center">
+                <a href="<%= contacts_path %>" class="btn btn-primary btn-large">Contact Me</a>
               </div>
             </div>
-
-          </section>
-          <!-- end: Slider -->
-      </div>
-
-      <div class="row-fluid">
-          <div class="hero-unit span12">
-              <div class="row-fluid">
-                  <div class="span9">
-                      <h3>Ruby on Rails Web Developer</h3>
-                      <p> I am a Ruby on Rails developer with a business background. I am <span style="color: #5bb75b; font-weight:600">passionate about coding</span>, and using software to <span style="color: #5bb75b; font-weight:600">create value</span> and to <span style="color: #5bb75b; font-weight:600">solve real-world problems</span>. I am proficient in Ruby on Rails, Javascript / jQuery, HTML, and CSS. </p>
-                  </div>
-                  <div class="span3">
-                      <div class="button-block">
-                          <div class="pull-vertical-center">
-                              <a href="<%= contacts_path %>" class="btn btn-primary btn-large">Contact Me</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
           </div>
+        </div>
       </div>
+    </div>
 
 
-	<h2 class="underline">Proficiencies <small class="hide">- <a href="#">View All Posts >></a></small></h2>
-	<div class="row-fluid works">
-		<ul class="thumbnails">
-			<li class="span3 item">
-				<div class="thumbnail os">
-					<i class="icon-laptop"></i>
-					<h4 class="title">Ruby on Rails</h4>
-					<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				</div>
-			</li>
-			<li class="span3 item">
-				<div class="thumbnail os">
-					<i class="icon-bar-chart"></i>
-					<h4 class="title">HTML & CSS</h4>
-					<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				</div>
-			</li>
-			<li class="span3 item">
-				<div class="thumbnail os">
-					<i class="icon-coffee"></i>
-					<h4 class="title">Javascript & Coffeescript</h4>
-					<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				</div>
-			</li>
-			<li class="span3 item">
-				<div class="thumbnail os">
-					<i class="icon-cogs"></i>
-					<h4 class="title">Python</h4>
-					<p class="description hide">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				</div>
-			</li>
-		</ul>
-	</div>
+    <h2 class="underline">Proficiencies</h2>
+    <div class="row-fluid works">
+    	<ul class="thumbnails">
+    		<li class="span3 item">
+    			<div class="thumbnail os">
+    				<i class="icon-laptop"></i>
+    				<h4 class="title">Ruby on Rails</h4>
+    			</div>
+    		</li>
+    		<li class="span3 item">
+    			<div class="thumbnail os">
+    				<i class="icon-bar-chart"></i>
+    				<h4 class="title">HTML & CSS</h4>
+    			</div>
+    		</li>
+    		<li class="span3 item">
+    			<div class="thumbnail os">
+    				<i class="icon-coffee"></i>
+    				<h4 class="title">Javascript & Coffeescript</h4>
+    			</div>
+    		</li>
+    		<li class="span3 item">
+    			<div class="thumbnail os">
+    				<i class="icon-cogs"></i>
+    				<h4 class="title">Python</h4>
+    			</div>
+    		</li>
+    	</ul>
+    </div>
 
-	<hr class="transparent"/>
+    <hr class="transparent"/>
 
-	<h2 class="underline">Selected Projects <small>- <a href="<%= projects_path %>">View All Projects >></a></small></h2>
-	<div class="row-fluid works">
-		<ul class="thumbnails">
-      <% @projects = Project.order(:priority)[0..2] %>
-      <% @projects.each do |proj| %>
-        <li class="span4 item">
-          <div class="thumbnail">
-            <a href="<%= proj.web_page %>" target="_blank" class="image">
-              <%= image_tag proj.image_url(:proj) %>
-              <span class="frame-overlay"></span>
-            </a>
-            <h4 class="title"><%= proj.title %></h4>
-            <p class="description"><%= proj.short_description %></p>
-          </div>
-        </li>
-      <% end %>
-		</ul>
-	</div>
+    <h2 class="underline">Selected Projects <small>- <a href="<%= projects_path %>">View All Projects >></a></small></h2>
+    <div class="row-fluid works">
+    	<ul class="thumbnails">
+        <% @projects = Project.order(:priority)[0..2] %>
+        <% @projects.each do |proj| %>
+          <li class="span4 item">
+            <div class="thumbnail">
+              <a href="<%= proj.web_page %>" target="_blank" class="image">
+                <%= image_tag proj.image_url(:proj) %>
+                <span class="frame-overlay"></span>
+              </a>
+              <h4 class="title"><%= proj.title %></h4>
+              <p class="description"><%= proj.short_description %></p>
+            </div>
+          </li>
+        <% end %>
+    	</ul>
+    </div>
 
-	<hr class="transparent"/>
-  <% @posts = Post.where(:published => true).reverse[0..3] %>
+    <hr class="transparent"/>
+    <% @posts = Post.where(:published => true).reverse[0..3] %>
 
-	<h2 class="underline">Latest Blog Posts <small>- <a href="<%= posts_path %>">View All Posts >></a></small></h2>
-	<div class="row-fluid works">
-		<ul class="thumbnails">
-      <% @posts.each do |p| %>
-			<li class="span3 item">
-				<div class="thumbnail">
-					<a href="<%= post_path(p) %>" class="image">
-            <%= image_tag p.image_url(:blog) %>
-						<p class="frame-overlay"></p>
-					</a>
-					<div class="meta">
-						<div class="block"><i class="icon-book"></i></div>
-					</div>
-					<div class="info" style="display:block">
-						<h4 class="title lp"><%= p.title %></h4>
-            <span class="datetimeformat" style="margin-bottom:0"><%= p.updated_at.to_s(:proj_time) %></span>
-					</div>
-          <br /><br /><br /><div class="description lp"><%= p.short_description %> </div>
-				</div>
-			</li>
-      <% end %>
-			<li class="span3 item hide">
-				<div class="thumbnail">
-					<a href="./portfolio-single.html" class="image">
-						<%= image_tag "latest2.jpg" %>
-						<span class="frame-overlay"></span>
-					</a>
-					<div class="meta">
-						<div class="block"><i class="icon-reorder "></i></div>
-						<p>Mar 23, 2013</p>
-					</div>
-					<div class="info">
-						<h4 class="title lp">Portfolio Item #2</h4>
-						<p class="description lp">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					</div>
-				</div>
-			</li>
-			<li class="span3 item hide">
-				<div class="thumbnail">
-					<a href="./portfolio-single.html" class="image">
-						<%= image_tag "latest3.jpg" %>
-						<span class="frame-overlay"></span>
-					</a>
-					<div class="meta">
-						<div class="block"><i class="icon-exclamation-sign"></i></div>
-						<p>Mar 23, 2013</p>
-					</div>
-					<div class="info">
-						<h4 class="title lp">Portfolio Item #3</h4>
-						<p class="description lp">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					</div>
-				</div>
-			</li>
-			<li class="span3 item hide">
-				<div class="thumbnail">
-					<a href="./portfolio-single.html" class="image">
-						<%= image_tag "latest4.jpg" %>
-						<span class="frame-overlay"></span>
-					</a>
-					<div class="meta">
-						<div class="block"><i class="icon-sign-blank"></i></div>
-						<p>Mar 23, 2013</p>
-					</div>
-					<div class="info">
-						<h4 class="title lp">Portfolio Item #4</h4>
-						<p class="description lp">Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-      </section>
-      <!-- end: Page section -->
-
-  </div>
-
-  <div class="row">
-
-  <!-- start: Page section -->
-<% # HIDE %>
-  <section class="span6 hide">
-
-  <!-- start: posts-->
-
-	<h2 class="underline">Nullam diam felis</h2>
-	<div class="media">
-		<a class="pull-left" href="./blog-single.html">
-			<%= image_tag "sidebar1.jpg", class: "media-object" %>
-			<span class="frame-overlay"></span>
-		</a>
-		<div class="media-body">
-			<p>Maecenas lectus nulla, consequat et pellentesque vel, varius in mi.
-				Pellentesque at nisl non dolor imperdiet bibendum at et tortor. Duis ligula diam,
-				commodo vitae vulputate condimentum, porta vitae dui.</p>
-			<a href="blog-single.html" class="read-more">Read more</a>
-		</div>
-	</div>
-	<div class="media">
-		<a class="pull-left" href="./blog-single.html">
-      <%= image_tag "sidebar2.jpg", class: "media-object" %>
-			<span class="frame-overlay"></span>
-		</a>
-		<div class="media-body">
-			<p>Maecenas lectus nulla, consequat et pellentesque vel, varius in mi.
-				Pellentesque at nisl non dolor imperdiet bibendum at et tortor. Duis ligula diam,
-				commodo vitae vulputate condimentum, porta vitae dui.</p>
-			<a href="blog-single.html" class="read-more">Read more</a>
-		</div>
-	</div>
-  <!-- end: posts-->
-
+    <h2 class="underline">Latest Blog Posts <small>- <a href="<%= posts_path %>">View All Posts >></a></small></h2>
+    <div class="row-fluid works">
+    	<ul class="thumbnails">
+        <% @posts.each do |p| %>
+    		<li class="span3 item">
+    			<div class="thumbnail">
+    				<a href="<%= post_path(p) %>" class="image">
+              <%= image_tag p.image_url(:blog) %>
+    					<p class="frame-overlay"></p>
+    				</a>
+    				<div class="meta">
+    					<div class="block"><i class="icon-book"></i></div>
+    				</div>
+    				<div class="info" style="display:block">
+    					<h4 class="title lp"><%= p.title %></h4>
+    				</div>
+            <br /><br /><br /><div class="description lp"><%= p.short_description %> </div>
+    			</div>
+    		</li>
+        <% end %>
+    	</ul>
+    </div>
   </section>
-<% # HIDE %>
-  <section class="span6 hide">
+<!-- end: Page section -->
 
-  <!-- start: posts-->
-	<h2 class="underline">Client Testimonials <small> - <a href="#">View All Testimonials »</a></small></h2>
-	<div id="myCarousel" class="carousel slide testimonials">
-		<!-- Carousel items -->
-		<div class="carousel-inner">
-			<div class="active item">
-				<div class="row-fluid">
+</div>
 
-						<div class="testimonial">
-							<div class="content">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra varius posuere.
-									Sed consectetur rutrum egestas. Pellentesque interdum, mi ut dignissim adipiscing,
-									orci enim tempor purus, aliquam tincidunt leo mauris id eros.
-								</p>
-								<span class="quote-arrow"></span>
-							</div>
-							<div class="author"><p><i class="icon-user"></i> Jhon Doe</p></div>
-							<div class="author-add"><p>Project Manager, Company</p></div>
-						</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="row-fluid">
-						<div class="testimonial">
-							<div class="content">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra varius posuere.
-									Sed consectetur rutrum egestas. Pellentesque interdum, mi ut dignissim adipiscing,
-									orci enim tempor purus, aliquam tincidunt leo mauris id eros.
-								</p>
-								<span class="quote-arrow"></span>
-							</div>
-							<div class="author"><p><i class="icon-user"></i> Jhon Doe</p></div>
-							<div class="author-add"><p>Project Manager, Company</p></div>
-						</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="row-fluid">
 
-						<div class="testimonial">
-							<div class="content">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra varius posuere.
-									Sed consectetur rutrum egestas. Pellentesque interdum, mi ut dignissim adipiscing,
-									orci enim tempor purus, aliquam tincidunt leo mauris id eros.
-								</p>
-								<span class="quote-arrow"></span>
-							</div>
-							<div class="author"><p><i class="icon-user"></i> Jhon Doe</p></div>
-							<div class="author-add"><p>Project Manager, Company</p></div>
-						</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="row-fluid">
-						<div class="testimonial">
-							<div class="content">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra varius posuere.
-									Sed consectetur rutrum egestas. Pellentesque interdum, mi ut dignissim adipiscing,
-									orci enim tempor purus, aliquam tincidunt leo mauris id eros.
-								</p>
-								<span class="quote-arrow"></span>
-							</div>
-							<div class="author"><p><i class="icon-user"></i> Jhon Doe</p></div>
-							<div class="author-add"><p>Project Manager, Company</p></div>
-						</div>
-				</div>
-			</div>
-		</div>
-		<!-- Carousel nav -->
-		<a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="icon-angle-left"></i></a>
-		<a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-angle-right"></i></a>
-	</div>
-
-  <!-- end: posts-->
-
-  </section>
-  <!-- end: Page section -->
-  </div>

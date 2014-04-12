@@ -12,3 +12,9 @@
  *= require_tree .
  *= require vendor
  */
+
+
+.highlight {
+  color: #5bb75b;
+  font-weight:600;
+}

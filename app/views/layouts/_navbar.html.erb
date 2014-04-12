@@ -5,64 +5,17 @@
       <a class="brand" href="<%= home_path %>"> <span class="logo-text">matt schneider</span> <small>ruby on rails developer</small></a>
       <span class="langaddr">
         <address class="pull-left">
-
           <i class="icon-envelope"></i> <a href="mailto:schneider.matthew.b@gmail.com">schneider.matthew.b@gmail.com</a>
-          <span class="hide"><i class="icon-phone"></i> (206) 276-7942</span>
         </address>
-        <div class="pull-right">
-  <% #HIDDEN %>
-          <div class="btn-group hide">
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-            English
-            <span class="caret"></span>
-            </a>
-          </div>
-        </div>
       </span>
     </div>
     <div class="container navi">
       <ul class="nav">
-        <li class="activation hide" id="homelink"><%= link_to "Home", home_path %></li>
-<% #HIDDEN %>
-        <li class="dropdown hide">
-          <a data-toggle="dropdown" class="dropdown-toggle" href="./about.html">
-                    Features</a>
-          <ul class="dropdown-menu">
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./services.html">Our Services</a></li>
-            <li><a href="./full-width.html">Full Width</a></li>
-            <li><a href="./font-icons.html">All Icons</a></li>
-            <li><a href="./price-table.html">Price Table</a></li>
-            <li><a href="./404.html">404 Page not found</a></li>
-          </ul>
-        </li>
-<% #HIDDEN %>
-        <li class="dropdown hide">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="./bs-scaffolding.html">
-                Bootstrap Styles</a>
-            <ul class="dropdown-menu">
-                <li><a href="./bs-scaffolding.html">Scaffolding</a></li>
-                <li><a href="./bs-base-css.html">Base CSS</a></li>
-                <li><a href="./bs-components.html">Components</a></li>
-                <li><a href="./bs-javascript.html">JavaScript</a></li>
-            </ul>
-        </li>
-
         <li class="activation" id="projectlink"><%= link_to "Projects", projects_path %></li>
         <li class="activation" id="bloglink"><%= link_to "Blog", posts_path %></li>
         <li class="activation" id="contactlink"><%= link_to "Contact", contacts_path %></li>
       </ul>
-
-
-<% #HIDDEN %>
-      <div class="pull-right">
-        <ul class="nav">
-
-        </ul>
-      </div>
-
     </div>
-
   </div>
 </div>
 <!-- end: Top Menu -->

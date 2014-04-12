@@ -1,77 +1,61 @@
 <!-- start: Footer -->
 
 <div class="row">
-<hr class="transparent"/>
-    <div class="span4">
-        <h3 class="widget-title">About Me</h3>
-        <div class="widget-inner">
-            <p>
-                I am a Ruby on Rails developer living in Seattle, WA.
-            </p>
-            <p>
-                Please contact me to learn more!
-            </p>
-</div>
+  <hr class="transparent"/>
+  <div class="span4">
+    <h3 class="widget-title">About Me</h3>
+    <div class="widget-inner">
+      <p>I am a Ruby on Rails developer living in Seattle, WA.</p>
+      <p>Please contact me to learn more!</p>
     </div>
-    <div class="span4">
-        <h3 class="widget-title">Latest Posts</h3>
-        <% @footer_posts = Post.all.reverse %>
-        <div class="widget-inner lates-blog-post">
-            <% @posts = Post.all.reverse[0..2] %>
-            <% @posts.each do |p| %>
-            <div class="media">
-                <i class="icon-pencil media-object"></i>
-                <div class="media-body">
-                    <a href="<%= post_path(p) %>">
-                        <%= p.title %>
-                    </a>
-                    <div class="date"><%= distance_of_time_in_words(p.updated_at, Time.now) %> ago</div>
-                </div>
-            </div>
-            <% end %>
+  </div>
+  <div class="span4">
+    <h3 class="widget-title">Latest Posts</h3>
+    <% @footer_posts = Post.all.reverse %>
+    <div class="widget-inner lates-blog-post">
+      <% @posts = Post.all.reverse[0..2] %>
+      <% @posts.each do |p| %>
+      <div class="media">
+        <i class="icon-pencil media-object"></i>
+        <div class="media-body">
+          <a href="<%= post_path(p) %>"><%= p.title %></a>
         </div>
+      </div>
+      <% end %>
     </div>
-    <div class="span3 hide">
-        <h3 class="widget-title">Latest Tweets</h3>
-        <!-- start: Twitter Widget -->
-        <div id="twitter-foot"></div>
-        <!-- end: Twitter Widget -->
-    </div>
-    <div class="span4">
-        <h3 class="widget-title">Contact Info</h3>
-        <div class="widget-inner">
-            <address>
-                <div class="row-fluid">
-                  <div class=""><i class="icon-user"></i><strong>Matthew Schneider</strong></div>
-                  <div class=""><i class="icon-home"></i> <strong>Address:</strong> Seattle, WA</div>
-                  <div class=""><i class="icon-envelope"></i> <strong>Email:</strong> <a href="mailto:schneider.matthew.b@gmail.com">schneider.matthew.b@gmail.com</a></div>
-                </div>
-            </address>
-  <h4 class="socialh">Latest Posts</h4>
-            <ul class="social clearfix">
-                <li class="hide"><a href="http://www.facebook.com/pages/dxthemescom/559921474037790#" class="facebook" data-original-title="Facebook" data-placement="top" rel="tooltip"></a></li>
-                <li><a href="https://twitter.com/SchnerdAlert" class="twitter2" data-original-title="Twitter" data-placement="top" rel="tooltip"></a></li>
-                <li class="hide"><a href="#" class="google-plus" data-original-title="Google+" data-placement="top" rel="tooltip"></a></li>
-            </ul>
+  </div>
+  <div class="span4">
+    <h3 class="widget-title">Contact Info</h3>
+    <div class="widget-inner">
+      <address>
+        <div class="row-fluid">
+          <div class=""><i class="icon-user"></i><strong>Matthew Schneider</strong></div>
+          <div class=""><i class="icon-home"></i> <strong>Address:</strong> Seattle, WA</div>
+          <div class=""><i class="icon-envelope"></i> <strong>Email:</strong> <a href="mailto:schneider.matthew.b@gmail.com">schneider.matthew.b@gmail.com</a></div>
         </div>
+      </address>
+      <h4 class="socialh">Latest Posts</h4>
+      <ul class="social clearfix">
+        <li class="hide"><a href="http://www.facebook.com/pages/dxthemescom/559921474037790#" class="facebook" data-original-title="Facebook" data-placement="top" rel="tooltip"></a></li>
+        <li><a href="https://twitter.com/SchnerdAlert" class="twitter2" data-original-title="Twitter" data-placement="top" rel="tooltip"></a></li>
+        <li class="hide"><a href="#" class="google-plus" data-original-title="Google+" data-placement="top" rel="tooltip"></a></li>
+      </ul>
     </div>
+  </div>
 </div>
-</div>
-</footer>
 <!-- end: Footer -->
 
 <!-- start: Footer menu-->
 <section id="footer-menu">
-<div class="container">
-<div class="row">
-    <div class="span4"></div>
-    <div class="span8 hidden-phone">
-        <ul class="pull-right">
-            <li><a href="<%= home_path %>">Home</a></li>
-            <li><a href="<%= projects_path %>">Projects</a></li>
-            <li><a href="<%= posts_path %>">Blog</a></li>
-            <li class="hide"><a href="#">About Me</a></li>
-            <li><a href="<%= contacts_path %>">Contact Me</a></li>
-        </ul>
+  <div class="container">
+    <div class="row">
+      <ul class="pull-right">
+        <li><a href="<%= home_path %>">Home</a></li>
+        <li><a href="<%= projects_path %>">Projects</a></li>
+        <li><a href="<%= posts_path %>">Blog</a></li>
+        <li class="hide"><a href="#">About Me</a></li>
+        <li><a href="<%= contacts_path %>">Contact Me</a></li>
+      </ul>
     </div>
-</div>
+  </div>
+</section>

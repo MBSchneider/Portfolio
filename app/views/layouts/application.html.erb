@@ -9,8 +9,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;"/>
 
-  <% # MATT ADDITION %>
-
   <%= javascript_include_tag "application" %>
   <%= stylesheet_link_tag "application" %>
 
@@ -24,16 +22,20 @@
 </head>
 <body>
 <%= render 'layouts/navbar' %>
-<div class="container">
+<% if flash[:notice] || flash[:error] || flash[:info] || flash[:success] || flash[:alert] || current_user %>
+  <div class="container">
   <% [:notice,:error,:info,:success,:alert].each do |key| %>
+    <% if flash[key] %>
     <div class="message">
       <%= flash[key] %>
     </div>
+    <% end %>
   <% end %>
   <% if current_user %>
     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
   <% end %>
 </div>
+<% end %>
 <div class="container">
   <%= yield %>
 </div>
